@@ -1,0 +1,56 @@
+FEAP: 3-D Transient Thermal Analysis
+  0  0  0  3  1  27
+
+MATErial 1
+  THERmal
+    FOURIER ISOTROPIC  10.0   1.0
+    DENSITY MASS       0.10
+
+BLOCK
+  CARTESIAN 20 20 2 0 1 0 0
+  BRICK 27
+    1  0.0  0.0  0.0
+    2  5.0  0.0  0.0
+    3  5.0  2.5  0.0
+    4  0.0  2.5  0.0
+    5  0.0  0.0  0.5
+    6  5.0  0.0  0.5
+    7  5.0  2.5  0.5
+    8  0.0  2.5  0.5
+
+EBOUnd
+  1  0  1
+  1  5  1  ! Use for steady state problem only
+
+EDISpl
+  1  0  1
+
+END ! mesh
+
+! Steady state solution
+
+BATCh
+  opti           ! Optimize provile
+  PLOT PERS 1
+  PLOT HIDE
+END
+0
+40 10 50
+0 1 0
+
+BATCh
+  DT,,0.5        ! Sets to parameter value
+  LOOP,,1
+    TIME
+    loop,,10
+      TANG,,1   ! Problem linear, no iterations
+    next
+  NEXT
+  plot pers
+  plot hide
+  plot cont
+END
+            ! End of parameter input
+INTEractive
+
+STOP

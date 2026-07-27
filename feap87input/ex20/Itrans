@@ -1,0 +1,32 @@
+feap * * Transient analysis of beam
+  0 0 0 2 3 2
+
+mate 1
+  frame
+    elastic isotropic 12000
+    cross   section   1 1/12
+    density mass      10
+
+
+block
+  cart 24 1
+    1  0  0
+    2 10  0
+
+ebou
+  1  0 1 1 
+  1 10 0 1
+
+cforc
+  node 20/3 0 0 -1 0
+
+end
+
+ include solve1
+
+inter
+
+ include solve2
+
+inter
+stop

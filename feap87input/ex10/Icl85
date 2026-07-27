@@ -1,0 +1,7 @@
+parameter 
+  n = 4
+
+include Iplate_cl
+
+inter
+stop

@@ -1,0 +1,61 @@
+feap: Curved beam Ogden material
+  0 0 0 2 2 9
+
+mate 1
+  solid
+    elastic ogden 1000 1000  2 
+    density mass      10
+
+noprint
+parameters
+  r1 = 5
+  r2 = 10
+  n1 = 16
+  n2 = 32
+
+block
+  polar n1 n2
+   quad 9
+    1 r1 0.0
+    2 r2 0.0
+    3 r2 90.0
+    4 r1 90.0
+
+eboun
+  1 0 1 0
+  2 0 1 0
+
+edis
+  2 0 0.1 0.0
+
+cboun
+  node  0.0 (r1+r2)/2  1  1
+
+end
+
+batch
+  comm ex22_curve_ogden
+  plot mesh
+  plot boun
+end
+
+batch
+  plot deform
+  dt,,1
+  prop
+  loop,,10
+    time
+    loop,,20
+      tang,,1
+    next
+    plot clear
+    plot pstre 6
+  next
+end
+
+
+
+inter
+
+stop
+

@@ -1,0 +1,62 @@
+parameter
+q = 9
+
+FEAP: 2-D Transient Thermal Analysis
+  0  0  0  2  1  q
+
+param
+  n = 24
+
+MATErial 1
+  THERmal
+    FOURIER ISOTROPIC  10.0   1.0
+    DENSITY MASS       0.10
+
+BLOCK 1
+  CARTESIAN n n 0 0 1 0 0
+  QUADrilateral q
+    1  0.0  0.0
+    2  5.0  0.0
+    3  5.0  5.0
+    4  0.0  5.0
+
+BLOCK 1
+  CARTESIAN n n 0 0 1 0 0
+  QUADrilateral q
+    1  0.0  5.0
+    2  5.0  5.0
+    3  5.0 10.0
+    4  0.0 10.0
+
+BLOCK 1
+  CARTESIAN n n 0 0 1 0 0
+  QUADrilateral q
+    1  5.0  5.0
+    2 10.0  5.0
+    3 10.0 10.0
+    4  5.0 10.0
+
+
+EBOUnd
+  2  0  1
+  1 10  1  ! Use for steady state problem only
+
+EDISpl
+  1 10  1
+
+END ! mesh
+
+TIE
+
+! Steady state solution
+
+BATCh
+  TANGent,,1     ! Solve problem
+! PLOT,CONTour,1 ! Contour solution
+  plot vect ,,,, 1
+END
+
+INTEractive
+
+
+STOP

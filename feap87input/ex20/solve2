@@ -1,0 +1,26 @@
+
+batch
+  comm ex20_restart
+  restart
+  disp all 
+  stre all 
+  plot defo 100
+  dt,,0.1
+  loop,,50
+    loop,,2
+      time
+      loop,,3
+        tang,,1
+      next
+    next
+    plot clean
+    plot load -1
+    plot cont 2
+    plot title
+  next
+  disp all
+  stre all
+! save
+end
+
+

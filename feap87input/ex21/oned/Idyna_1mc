@@ -1,0 +1,58 @@
+feap: 1-D Mixed Solid: Transient solution with consistent mass
+  0 0 0 1 1 2
+
+parameter
+  n = 10
+  pi = acos(-1)
+
+mate 1
+  solid
+    elastic isotropic 2500 0.25
+    density mass      10
+    mass consist
+    mixed
+
+
+block
+  cart n
+   line 2
+    1  5.0
+    2 10.0
+
+eboun
+  1 10 1
+
+eforc
+  1 5 2.0
+
+
+end
+
+batch
+  prop
+end
+ 1 2 0 0.7 0 0 1 pi/0.7 0
+
+batch
+  comm ex21_1m_cons_mass
+  plot line 0 5  ! Solid with width 5
+  trans newmark
+  dt,,0.01
+  loop,,20
+    loop,,5
+      time
+      loop,,3
+        tang,,1
+      next
+    next
+    plot hfram 1
+    plot cont 1
+    plot hfram 2
+    plot stres 1
+  next
+end
+
+inter
+
+stop
+
