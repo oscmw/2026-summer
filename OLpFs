@@ -1,0 +1,1958 @@
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)           
+
+     Solution date: Tue Jul 28 15:30:12 2026
+
+              Release 8.7.1b      
+              03 July 2026        
+
+     Input Data Filename: ILpFs                                                                                                                           
+
+     Number of Nodal Points  - - - - - - :       96
+     Number of Elements  - - - - - - - - :       24
+
+     Spatial Dimension of Mesh - - - - - :        3
+     Degrees-of-Freedom/Node (Maximum) - :        3
+     Equations/Element       (Maximum) - :        0
+     Number Element Nodes    (Maximum) - :        8
+
+     Number of Material Sets - - - - - - :        2
+     Number Parameters/Set   (Program) - :      350
+     Number Parameters/Set   (Users  ) - :      150
+
+     Number Added Element Equations  - - :        0
+
+  C o n s t a n t    V a l u e s
+
+     Constant pi =  3.14159265E+00
+     Constant pr =  1.00000000E+03
+     Constant be =  0.00000000E+00
+     Constant em =  2.00000000E+04
+     Constant nu =  4.90000000E-01
+     Constant rh =  1.06000000E+03
+     Constant h1 =  3.50000000E+03
+     Constant h2 =  1.25000000E+00
+     Constant dt =  1.00000000E-01
+     Constant dd =  1.00000000E-03
+     Constant ta =  1.00000000E+00
+     Constant la =  3.00000000E+00
+     Constant ln =  1.20000000E+02
+     Constant ne =  1.00000000E+00
+     Constant mi =  2.00000000E+00
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   M a t e r i a l    P r o p e r t i e s
+
+     Material Set Number   1: Element Type: SOLId:                           
+     Degree of Freedom Assignments    Local    Global
+                                     Number    Number
+                                        1         1
+                                        2         2
+                                        3         3
+
+     T h r e e   D i m e n s i o n a l   S o l i d   E l e m e n t
+
+     M e c h a n i c a l   P r o p e r t i e s
+
+     NeoHookean Stored Energy Function 
+
+          3-Dimensional Analysis
+
+          Modulus E        2.00000E+04
+          Poisson ratio    0.49000
+          Bulk Modulus     3.33333E+05
+          Shear Modulus    6.71141E+03
+
+          Volume Model     2
+               1: U(J) = 0.25*(J**2 - 1 - 2 * ln J)
+               2: U(J) = 0.50*(J - 1)**2
+               3: U(J) = 0.50*(ln J)**2
+               4: U(J) = 2.00*(J - 1 - ln J)
+               5: None: Incompressible
+
+          Density          1.06000E+03
+
+          1-Gravity Load   0.00000E+00
+          2-Gravity Load   0.00000E+00
+          3-Gravity Load   0.00000E+00
+          Wave speed - c_o 1.79696E+01
+          Implicit time integration: theta =:, 0.00000
+
+     C o n s t i t u t i v e    S t a r t
+
+          Start state  : Elastic
+
+     E l e m e n t    M o d e l
+
+          Formulation  : Finite Deformation Mixed       
+          Element type : Mixed
+          Plot Output  : On
+          Augmenting   : Off
+          Interpolation: Lagrangian Polynomials
+          Mass type    : Consistent.
+          History terms/pt  =     0
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   M a t e r i a l    P r o p e r t i e s
+
+     Material Set Number   2: Element Type: SOLId: Element Material Set =   1
+     Degree of Freedom Assignments    Local    Global
+                                     Number    Number
+                                        1         1
+                                        2         2
+                                        3         3
+
+     T h r e e   D i m e n s i o n a l   S o l i d   E l e m e n t
+
+          Density          0.00000E+00
+
+          1-Gravity Load   0.00000E+00
+          2-Gravity Load   0.00000E+00
+          3-Gravity Load   0.00000E+00
+
+        Holzapfel-Gasser I_4 Fiber Parameters
+
+          Fiber 1: H1 =  3.50000E+03 H2 =  1.25000E+00
+
+        Anistropic Structure Vectors
+
+          Vector 1:  1.00000E+00  0.00000E+00  0.00000E+00
+
+     C o n s t i t u t i v e    S t a r t
+
+          Start state  : Elastic
+
+     E l e m e n t    M o d e l
+
+          Formulation  : Finite Deformation Displacement
+          Element type : Displacement
+          Plot Output  : On
+          Interpolation: Lagrangian Polynomials
+          History terms/pt  =     0
+
+     W a r n i n g s   &   E r r o r s
+          Material density is zero.
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+  N o d a l   B. C.
+
+      Node 1-b.c. 2-b.c. 3-b.c.
+         1      1      1      1
+         4      0      1      0
+
+     Start Load Set   1
+           Proportional Load =   1
+
+     End Load Set   1
+
+     E l e m e n t   S i z e   V a l u e s
+          h-minimum =  2.6104E-03
+          h-maximum =  7.7608E-03
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+  E d g e    N o d a l    B.C.
+
+    node  1-B.C.  2-B.C.  3-B.C.
+       1       1       1       1
+       4       0       1       1
+       5       0       0       1
+       8       0       0       1
+       9       0       0       1
+      12       0       0       1
+      13       0       0       1
+      16       0       0       1
+      17       0       0       1
+      20       0       0       1
+      21       0       0       1
+      24       0       0       1
+      25       0       0       1
+      28       0       0       1
+      29       0       0       1
+      32       0       0       1
+      33       0       0       1
+      36       0       0       1
+      37       0       0       1
+      40       0       0       1
+      41       0       0       1
+      44       0       0       1
+      45       0       0       1
+      48       0       0       1
+      49       0       0       1
+      52       0       0       1
+      53       0       0       1
+      56       0       0       1
+      57       0       0       1
+      60       0       0       1
+      61       0       0       1
+      64       0       0       1
+      65       0       0       1
+      68       0       0       1
+      69       0       0       1
+      72       0       0       1
+      73       0       0       1
+      76       0       0       1
+      77       0       0       1
+      80       0       0       1
+      81       0       0       1
+      84       0       0       1
+      85       0       0       1
+      88       0       0       1
+      89       0       0       1
+      92       0       0       1
+      93       0       0       1
+      96       0       0       1
+
+     Load Group   1: Proportional Load =     1
+
+       P o l a r    S u r f a c e
+
+     x_Coord.     y_Coord.     z_Coord.
+   0.0000E+00   0.0000E+00   0.0000E+00
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   C o o r d i n a t e    S u r f a c e   L o a d s
+
+      Polynomial type: Lagrange
+
+      Node    1 Coord    2 Coord    3 Coord   Pressure
+         1  1.000E-02 -1.800E+02  0.000E+00 -1.000E+03
+         2  1.000E-02 -1.800E+02  5.000E-03 -1.000E+03
+         3  1.000E-02 -9.000E+01  5.000E-03 -1.000E+03
+         4  1.000E-02 -9.000E+01  0.000E+00 -1.000E+03
+         5  1.000E-02 -1.800E+02  2.500E-03 -1.000E+03
+         6  1.000E-02 -1.350E+02  5.000E-03 -1.000E+03
+         7  1.000E-02 -9.000E+01  2.500E-03 -1.000E+03
+         8  1.000E-02 -1.350E+02  0.000E+00 -1.000E+03
+         9  1.000E-02 -1.350E+02  2.500E-03 -1.000E+03
+       N o d a l    F o r c e s
+
+   Local     Global
+    Node      Node    1 Force    2 Force    3 Force   Pressure
+       1         1 -3.235E-03 -4.263E-04  0.000E+00 -1.000E+03
+       2         2 -3.235E-03 -4.263E-04  0.000E+00 -1.000E+03
+       3         6 -3.235E-03 -4.263E-04  0.000E+00 -1.000E+03
+       4         5 -3.235E-03 -4.263E-04  0.000E+00 -1.000E+03
+       1         5 -3.015E-03 -1.249E-03  0.000E+00 -1.000E+03
+       2         6 -3.015E-03 -1.249E-03  0.000E+00 -1.000E+03
+       3        10 -3.015E-03 -1.249E-03  0.000E+00 -1.000E+03
+       4         9 -3.015E-03 -1.249E-03  0.000E+00 -1.000E+03
+       1         9 -2.589E-03 -1.986E-03  0.000E+00 -1.000E+03
+       2        10 -2.589E-03 -1.986E-03  0.000E+00 -1.000E+03
+       3        14 -2.589E-03 -1.986E-03  0.000E+00 -1.000E+03
+       4        13 -2.589E-03 -1.986E-03  0.000E+00 -1.000E+03
+       1        13 -1.986E-03 -2.589E-03  0.000E+00 -1.000E+03
+       2        14 -1.986E-03 -2.589E-03  0.000E+00 -1.000E+03
+       3        18 -1.986E-03 -2.589E-03  0.000E+00 -1.000E+03
+       4        17 -1.986E-03 -2.589E-03  0.000E+00 -1.000E+03
+       1        17 -1.249E-03 -3.015E-03  0.000E+00 -1.000E+03
+       2        18 -1.249E-03 -3.015E-03  0.000E+00 -1.000E+03
+       3        22 -1.249E-03 -3.015E-03  0.000E+00 -1.000E+03
+       4        21 -1.249E-03 -3.015E-03  0.000E+00 -1.000E+03
+       1        21 -4.263E-04 -3.235E-03  0.000E+00 -1.000E+03
+       2        22 -4.263E-04 -3.235E-03  0.000E+00 -1.000E+03
+       3        26 -4.263E-04 -3.235E-03  0.000E+00 -1.000E+03
+       4        25 -4.263E-04 -3.235E-03  0.000E+00 -1.000E+03
+
+     End Load Group   1
+
+     Load Group   1: Proportional Load =     1
+
+       P o l a r    S u r f a c e
+
+     x_Coord.     y_Coord.     z_Coord.
+   0.0000E+00   0.0000E+00   0.0000E+00
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   C o o r d i n a t e    S u r f a c e   L o a d s
+
+      Polynomial type: Lagrange
+
+      Node    1 Coord    2 Coord    3 Coord   Pressure
+         1  1.000E-02 -9.000E+01  0.000E+00 -1.000E+03
+         2  1.000E-02 -9.000E+01  5.000E-03 -1.000E+03
+         3  1.000E-02  0.000E+00  5.000E-03 -1.000E+03
+         4  1.000E-02  0.000E+00  0.000E+00 -1.000E+03
+         5  1.000E-02 -9.000E+01  2.500E-03 -1.000E+03
+         6  1.000E-02 -4.500E+01  5.000E-03 -1.000E+03
+         7  1.000E-02  0.000E+00  2.500E-03 -1.000E+03
+         8  1.000E-02 -4.500E+01  0.000E+00 -1.000E+03
+         9  1.000E-02 -4.500E+01  2.500E-03 -1.000E+03
+       N o d a l    F o r c e s
+
+   Local     Global
+    Node      Node    1 Force    2 Force    3 Force   Pressure
+       1        25  4.263E-04 -3.235E-03  0.000E+00 -1.000E+03
+       2        26  4.263E-04 -3.235E-03  0.000E+00 -1.000E+03
+       3        30  4.263E-04 -3.235E-03  0.000E+00 -1.000E+03
+       4        29  4.263E-04 -3.235E-03  0.000E+00 -1.000E+03
+       1        29  1.249E-03 -3.015E-03  0.000E+00 -1.000E+03
+       2        30  1.249E-03 -3.015E-03  0.000E+00 -1.000E+03
+       3        34  1.249E-03 -3.015E-03  0.000E+00 -1.000E+03
+       4        33  1.249E-03 -3.015E-03  0.000E+00 -1.000E+03
+       1        33  1.986E-03 -2.589E-03  0.000E+00 -1.000E+03
+       2        34  1.986E-03 -2.589E-03  0.000E+00 -1.000E+03
+       3        38  1.986E-03 -2.589E-03  0.000E+00 -1.000E+03
+       4        37  1.986E-03 -2.589E-03  0.000E+00 -1.000E+03
+       1        37  2.589E-03 -1.986E-03  0.000E+00 -1.000E+03
+       2        38  2.589E-03 -1.986E-03  0.000E+00 -1.000E+03
+       3        42  2.589E-03 -1.986E-03  0.000E+00 -1.000E+03
+       4        41  2.589E-03 -1.986E-03  0.000E+00 -1.000E+03
+       1        41  3.015E-03 -1.249E-03  0.000E+00 -1.000E+03
+       2        42  3.015E-03 -1.249E-03  0.000E+00 -1.000E+03
+       3        46  3.015E-03 -1.249E-03  0.000E+00 -1.000E+03
+       4        45  3.015E-03 -1.249E-03  0.000E+00 -1.000E+03
+       1        45  3.235E-03 -4.263E-04  0.000E+00 -1.000E+03
+       2        46  3.235E-03 -4.263E-04  0.000E+00 -1.000E+03
+       3        50  3.235E-03 -4.263E-04  0.000E+00 -1.000E+03
+       4        49  3.235E-03 -4.263E-04  0.000E+00 -1.000E+03
+
+     End Load Group   1
+
+     Load Group   1: Proportional Load =     1
+
+       P o l a r    S u r f a c e
+
+     x_Coord.     y_Coord.     z_Coord.
+   0.0000E+00   0.0000E+00   0.0000E+00
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   C o o r d i n a t e    S u r f a c e   L o a d s
+
+      Polynomial type: Lagrange
+
+      Node    1 Coord    2 Coord    3 Coord   Pressure
+         1  1.000E-02  0.000E+00  0.000E+00 -1.000E+03
+         2  1.000E-02  0.000E+00  5.000E-03 -1.000E+03
+         3  1.000E-02  9.000E+01  5.000E-03 -1.000E+03
+         4  1.000E-02  9.000E+01  0.000E+00 -1.000E+03
+         5  1.000E-02  0.000E+00  2.500E-03 -1.000E+03
+         6  1.000E-02  4.500E+01  5.000E-03 -1.000E+03
+         7  1.000E-02  9.000E+01  2.500E-03 -1.000E+03
+         8  1.000E-02  4.500E+01  0.000E+00 -1.000E+03
+         9  1.000E-02  4.500E+01  2.500E-03 -1.000E+03
+       N o d a l    F o r c e s
+
+   Local     Global
+    Node      Node    1 Force    2 Force    3 Force   Pressure
+       1        49  3.235E-03  4.263E-04  0.000E+00 -1.000E+03
+       2        50  3.235E-03  4.263E-04  0.000E+00 -1.000E+03
+       3        54  3.235E-03  4.263E-04  0.000E+00 -1.000E+03
+       4        53  3.235E-03  4.263E-04  0.000E+00 -1.000E+03
+       1        53  3.015E-03  1.249E-03  0.000E+00 -1.000E+03
+       2        54  3.015E-03  1.249E-03  0.000E+00 -1.000E+03
+       3        58  3.015E-03  1.249E-03  0.000E+00 -1.000E+03
+       4        57  3.015E-03  1.249E-03  0.000E+00 -1.000E+03
+       1        57  2.589E-03  1.986E-03  0.000E+00 -1.000E+03
+       2        58  2.589E-03  1.986E-03  0.000E+00 -1.000E+03
+       3        62  2.589E-03  1.986E-03  0.000E+00 -1.000E+03
+       4        61  2.589E-03  1.986E-03  0.000E+00 -1.000E+03
+       1        61  1.986E-03  2.589E-03  0.000E+00 -1.000E+03
+       2        62  1.986E-03  2.589E-03  0.000E+00 -1.000E+03
+       3        66  1.986E-03  2.589E-03  0.000E+00 -1.000E+03
+       4        65  1.986E-03  2.589E-03  0.000E+00 -1.000E+03
+       1        65  1.249E-03  3.015E-03  0.000E+00 -1.000E+03
+       2        66  1.249E-03  3.015E-03  0.000E+00 -1.000E+03
+       3        70  1.249E-03  3.015E-03  0.000E+00 -1.000E+03
+       4        69  1.249E-03  3.015E-03  0.000E+00 -1.000E+03
+       1        69  4.263E-04  3.235E-03  0.000E+00 -1.000E+03
+       2        70  4.263E-04  3.235E-03  0.000E+00 -1.000E+03
+       3        74  4.263E-04  3.235E-03  0.000E+00 -1.000E+03
+       4        73  4.263E-04  3.235E-03  0.000E+00 -1.000E+03
+
+     End Load Group   1
+
+     Load Group   1: Proportional Load =     1
+
+       P o l a r    S u r f a c e
+
+     x_Coord.     y_Coord.     z_Coord.
+   0.0000E+00   0.0000E+00   0.0000E+00
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   C o o r d i n a t e    S u r f a c e   L o a d s
+
+      Polynomial type: Lagrange
+
+      Node    1 Coord    2 Coord    3 Coord   Pressure
+         1  1.000E-02  9.000E+01  0.000E+00 -1.000E+03
+         2  1.000E-02  9.000E+01  5.000E-03 -1.000E+03
+         3  1.000E-02  1.800E+02  5.000E-03 -1.000E+03
+         4  1.000E-02  1.800E+02  0.000E+00 -1.000E+03
+         5  1.000E-02  9.000E+01  2.500E-03 -1.000E+03
+         6  1.000E-02  1.350E+02  5.000E-03 -1.000E+03
+         7  1.000E-02  1.800E+02  2.500E-03 -1.000E+03
+         8  1.000E-02  1.350E+02  0.000E+00 -1.000E+03
+         9  1.000E-02  1.350E+02  2.500E-03 -1.000E+03
+       N o d a l    F o r c e s
+
+   Local     Global
+    Node      Node    1 Force    2 Force    3 Force   Pressure
+       1        73 -4.263E-04  3.235E-03  0.000E+00 -1.000E+03
+       2        74 -4.263E-04  3.235E-03  0.000E+00 -1.000E+03
+       3        78 -4.263E-04  3.235E-03  0.000E+00 -1.000E+03
+       4        77 -4.263E-04  3.235E-03  0.000E+00 -1.000E+03
+       1        77 -1.249E-03  3.015E-03  0.000E+00 -1.000E+03
+       2        78 -1.249E-03  3.015E-03  0.000E+00 -1.000E+03
+       3        82 -1.249E-03  3.015E-03  0.000E+00 -1.000E+03
+       4        81 -1.249E-03  3.015E-03  0.000E+00 -1.000E+03
+       1        81 -1.986E-03  2.589E-03  0.000E+00 -1.000E+03
+       2        82 -1.986E-03  2.589E-03  0.000E+00 -1.000E+03
+       3        86 -1.986E-03  2.589E-03  0.000E+00 -1.000E+03
+       4        85 -1.986E-03  2.589E-03  0.000E+00 -1.000E+03
+       1        85 -2.589E-03  1.986E-03  0.000E+00 -1.000E+03
+       2        86 -2.589E-03  1.986E-03  0.000E+00 -1.000E+03
+       3        90 -2.589E-03  1.986E-03  0.000E+00 -1.000E+03
+       4        89 -2.589E-03  1.986E-03  0.000E+00 -1.000E+03
+       1        89 -3.015E-03  1.249E-03  0.000E+00 -1.000E+03
+       2        90 -3.015E-03  1.249E-03  0.000E+00 -1.000E+03
+       3        94 -3.015E-03  1.249E-03  0.000E+00 -1.000E+03
+       4        93 -3.015E-03  1.249E-03  0.000E+00 -1.000E+03
+       1        93 -3.235E-03  4.263E-04  0.000E+00 -1.000E+03
+       2        94 -3.235E-03  4.263E-04  0.000E+00 -1.000E+03
+       3         2 -3.235E-03  4.263E-04  0.000E+00 -1.000E+03
+       4         1 -3.235E-03  4.263E-04  0.000E+00 -1.000E+03
+
+     End Load Group   1
+
+    Material  Element Set  Element Type  NH1/2 History  NH3 History  NH4 History
+         1            1     Solid                 2            0            0
+         2            1     Solid                 0            0            0
+
+     P a r t i t i o n   1
+
+     E q u a t i o n / P r o b l e m   S u m m a r y:
+
+       Mesh dimension  (ndm) =         3 :  Number nodes     =              96
+       Number dof/node (ndf) =         3 :  Number elements  =              24
+       Element eqs.   (nadd) =         0 :  Number materials =               2
+       Number rigid bodies   =         0 :  Number equations =             237
+                                         :  Number global eq =               0
+       Number joints         =         0 :  Number tang terms=            5496
+       Transient integrator  = Static    :  Average col. ht. =              24
+
+
+  ---------------------------- END OF MESH INPUTS ----------------------------
+
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+     Solution Commands       Variable 1  Variable 2  Variable 3
+       PLOT      HIDE        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      MESH        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      AXIS        0.0000E+00  0.0000E+00  0.0000E+00
+ *Command   1 * plot HIDE           v:   0.00       0.00       0.00    
+                                                         t=     0.011     0.002
+ *ERROR* PPLOTF: Must specify PERSpective view first
+
+ *Command   2 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.011     0.003
+ *Command   3 * plot AXIS           v:   0.00       0.00       0.00    
+                                                         t=     0.011     0.003
+ *End of Solution Execution*                             t=     0.011     0.003
+ *Command   1 * plot wipe           v:   0.00       0.00       0.00    
+                                                         t=     0.012     0.003
+ *Command   1 * plot pers           v:   0.00       0.00       0.00    
+                                                         t=     0.012     0.003
+ Body occupies the space with:
+                 X             Y             Z
+   Minimum   -1.50000E-02  -1.50000E-02   0.00000E+00
+   Maximum    1.50000E-02   1.50000E-02   5.00000E-03
+   View pt    4.50000E-02   3.00000E-02   7.50000E-03
+
+   Components of vertical vector   (X,Y,Z).
+          X= 0.00E+00, Y= 0.00E+00, Z= 1.00E+00
+
+ *Command   1 * plot mesh           v:   0.00       0.00       0.00    
+                                                         t=     0.012     0.003
+ *End of Solution Execution*                             t=     0.012     0.003
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+     Solution Commands       Variable 1  Variable 2  Variable 3
+       PROP                  1.0000E+00  0.0000E+00  0.0000E+00
+ *Command   1 * prop                v:   1.00       0.00       0.00    
+                                                         t=     0.013     0.003
+  Proportional Load Table Number  1
+  Type 2: Piecewise Linear Function Variation
+  Linear Interpolation Table
+   No.    Time        Value
+    1   0.00000E+00   0.00000E+00
+    2   1.00000E+00   1.00000E+00
+ *End of Solution Execution*                             t=     0.013     0.003
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+     Solution Commands       Variable 1  Variable 2  Variable 3
+       LOOP      time        1.0000E+01  0.0000E+00  0.0000E+00
+       DT                    1.0000E-01  0.0000E+00  0.0000E+00
+       TIME                  0.0000E+00  0.0000E+00  0.0000E+00
+       LOOP      augment     3.0000E+00  0.0000E+00  0.0000E+00
+       LOOP      newton      1.2000E+02  0.0000E+00  0.0000E+00
+       TANG                  1.0000E+00  0.0000E+00  0.0000E+00
+       NEXT      newton      0.0000E+00  0.0000E+00  0.0000E+00
+       AUGMent               0.0000E+00  0.0000E+00  0.0000E+00
+       NEXT      augment     0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      WIPE        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      UNDE        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      MESH        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      DEFO        1.0000E+00  1.0000E+00  0.0000E+00
+       PLOT      MESH        0.0000E+00  0.0000E+00  0.0000E+00
+       NEXT      time        0.0000E+00  0.0000E+00  0.0000E+00
+       STRE      ne          1.0000E+00  0.0000E+00  0.0000E+00
+ *Command   1 * loop time           v:   10.0       16.0       0.00    
+                                                         t=     0.013     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.013     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.013     0.003
+
+   Computing solution at time   1.0000E-01 using dt =  1.0000E-01
+   Total proportional load is   1.0000E-01
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.013     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.013     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.013     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.013     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3945E+03; D-min 0.9188E+01; Ratio 0.4294E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.013     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.01 , System =         0.00
+--> SOLVE AT  5357.17 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.002354091670308E-06 Current   =    4.002354091670308E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.013     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.013     0.003
+   Residual 1 norm =  1.9771188E-03 Rel =  4.4571299E-01 t=     0.014     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3886E+03; D-min 0.1016E+02; Ratio 0.3826E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.014     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.01 , System =         0.00
+--> SOLVE AT  5555.64 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.002354091670308E-06 Current   =    2.933078257996000E-09
+    Relative  =    7.328382723808263E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.014     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.014     0.003
+   Residual 1 norm =  6.5462111E-06 Rel =  1.4757491E-03 t=     0.014     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3886E+03; D-min 0.1033E+02; Ratio 0.3762E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.014     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.01 , System =         0.00
+--> SOLVE AT  8823.46 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.002354091670308E-06 Current   =    5.469393150813494E-13
+    Relative  =    1.366544045214886E-07 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.014     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.014     0.003
+   Residual 1 norm =  1.0729251E-08 Rel =  2.4187553E-06 t=     0.014     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3886E+03; D-min 0.1033E+02; Ratio 0.3762E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.014     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.01 , System =         0.00
+--> SOLVE AT  7500.04 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.002354091670308E-06 Current   =    7.673352164409097E-20
+    Relative  =    1.917209719244698E-14 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   4.00       6.00       4.00    
+                                                         t=     0.014     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.014     0.003
+   Residual 1 norm =  2.8460616E-16 Rel =  6.4160365E-14 t=     0.015     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3886E+03; D-min 0.1033E+02; Ratio 0.3762E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.015     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.01 , System =         0.00
+--> SOLVE AT  6818.08 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.002354091670308E-06 Current   =    7.389055923198505E-34
+    Relative  =    1.846177463052706E-28 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       5.00    
+                                                         t=     0.015     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.015     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.015     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.015     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.015     0.003
+   Residual 1 norm =  6.7565138E-17 Rel =  1.5231589E-14 t=     0.015     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3886E+03; D-min 0.1033E+02; Ratio 0.3762E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.015     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  7142.82 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.002354091670308E-06 Current   =    4.389422982404688E-36
+    Relative  =    1.096710306451882E-30 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.015     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.015     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.015     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.015     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.015     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.015     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.015     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.015     0.003
+ *Command  15 * next time           v:   1.00       2.00       1.00    
+                                                         t=     0.015     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.015     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.015     0.003
+
+   Computing solution at time   2.0000E-01 using dt =  1.0000E-01
+   Total proportional load is   2.0000E-01
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.016     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.016     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.016     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.016     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3886E+03; D-min 0.1033E+02; Ratio 0.3762E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.016     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  5172.57 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.044270248751867E-06 Current   =    4.044270248751867E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.016     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.016     0.003
+   Residual 1 norm =  2.1128077E-03 Rel =  4.7630210E-01 t=     0.016     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3828E+03; D-min 0.1063E+02; Ratio 0.3599E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.016     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6000.43 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.044270248751867E-06 Current   =    3.067973286060708E-09
+    Relative  =    7.585974965465124E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.016     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.016     0.003
+   Residual 1 norm =  2.9771537E-06 Rel =  6.7115647E-04 t=     0.017     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3828E+03; D-min 0.1074E+02; Ratio 0.3564E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.017     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6521.84 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.044270248751867E-06 Current   =    2.169603666414915E-13
+    Relative  =    5.364635726518258E-08 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.017     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.017     0.003
+   Residual 1 norm =  3.7782259E-09 Rel =  8.5174667E-07 t=     0.017     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3828E+03; D-min 0.1074E+02; Ratio 0.3564E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.017     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6250.04 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.044270248751867E-06 Current   =    8.723869464704880E-21
+    Relative  =    2.157093598628138E-15 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   4.00       6.00       4.00    
+                                                         t=     0.017     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.017     0.003
+   Residual 1 norm =  1.7309377E-16 Rel =  3.9021501E-14 t=     0.018     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3828E+03; D-min 0.1074E+02; Ratio 0.3564E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.018     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6817.79 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.044270248751867E-06 Current   =    3.612910325285314E-35
+    Relative  =    8.933404800038577E-30 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       5.00    
+                                                         t=     0.018     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.018     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.018     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.018     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.018     0.003
+   Residual 1 norm =  2.1050940E-16 Rel =  4.7456316E-14 t=     0.018     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3828E+03; D-min 0.1074E+02; Ratio 0.3564E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.018     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6817.79 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.044270248751867E-06 Current   =    3.804782556196347E-35
+    Relative  =    9.407834596045035E-30 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.018     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.018     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.018     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.018     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.018     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.018     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.018     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.018     0.003
+ *Command  15 * next time           v:   2.00       2.00       2.00    
+                                                         t=     0.018     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.018     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.018     0.003
+
+   Computing solution at time   3.0000E-01 using dt =  1.0000E-01
+   Total proportional load is   3.0000E-01
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.018     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.018     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.018     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.019     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3828E+03; D-min 0.1074E+02; Ratio 0.3564E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.019     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6521.84 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.087968777937717E-06 Current   =    4.087968777937717E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.019     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.019     0.003
+   Residual 1 norm =  2.1971225E-03 Rel =  4.9530966E-01 t=     0.019     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3770E+03; D-min 0.1092E+02; Ratio 0.3453E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.019     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6521.84 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.087968777937717E-06 Current   =    3.178443230277803E-09
+    Relative  =    7.775116207911088E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.019     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.019     0.003
+   Residual 1 norm =  1.6042543E-06 Rel =  3.6165606E-04 t=     0.019     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3770E+03; D-min 0.1100E+02; Ratio 0.3428E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.019     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.087968777937717E-06 Current   =    9.401127615967637E-14
+    Relative  =    2.299706315445560E-08 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.019     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.019     0.003
+   Residual 1 norm =  1.4489589E-09 Rel =  3.2664695E-07 t=     0.020     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3770E+03; D-min 0.1100E+02; Ratio 0.3428E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.020     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6817.79 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.087968777937717E-06 Current   =    1.237452709790437E-21
+    Relative  =    3.027060080470335E-16 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       4.00    
+                                                         t=     0.020     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.020     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.020     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.020     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.020     0.003
+   Residual 1 norm =  2.1638099E-16 Rel =  4.8779981E-14 t=     0.020     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3770E+03; D-min 0.1100E+02; Ratio 0.3428E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.020     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.087968777937717E-06 Current   =    3.782367163254047E-35
+    Relative  =    9.252436524630604E-30 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.020     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.020     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.020     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.020     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.020     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.020     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.020     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.020     0.003
+ *Command  15 * next time           v:   3.00       2.00       3.00    
+                                                         t=     0.020     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.020     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.020     0.003
+
+   Computing solution at time   4.0000E-01 using dt =  1.0000E-01
+   Total proportional load is   4.0000E-01
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.020     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.020     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.020     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.021     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3770E+03; D-min 0.1100E+02; Ratio 0.3428E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.021     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.132419105819318E-06 Current   =    4.132419105819318E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.021     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.021     0.003
+   Residual 1 norm =  2.2590838E-03 Rel =  5.0927795E-01 t=     0.021     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3713E+03; D-min 0.1113E+02; Ratio 0.3336E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.021     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6521.84 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.132419105819318E-06 Current   =    3.272192477006447E-09
+    Relative  =    7.918346114503512E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.021     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.021     0.003
+   Residual 1 norm =  9.8996892E-07 Rel =  2.2317425E-04 t=     0.022     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3712E+03; D-min 0.1120E+02; Ratio 0.3315E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.022     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  5999.98 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.132419105819318E-06 Current   =    4.480669344360197E-14
+    Relative  =    1.084272729755428E-08 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.022     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.022     0.003
+   Residual 1 norm =  6.1251090E-10 Rel =  1.3808177E-07 t=     0.022     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3712E+03; D-min 0.1120E+02; Ratio 0.3315E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.022     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6521.84 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.132419105819318E-06 Current   =    2.169072605242916E-22
+    Relative  =    5.248917279925467E-17 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       4.00    
+                                                         t=     0.022     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.022     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.022     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.022     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.022     0.003
+   Residual 1 norm =  3.5429449E-16 Rel =  7.9870598E-14 t=     0.022     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3712E+03; D-min 0.1120E+02; Ratio 0.3315E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.022     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.132419105819318E-06 Current   =    1.225687401408172E-34
+    Relative  =    2.966028783678175E-29 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.022     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.022     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.023     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.023     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.023     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.023     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.023     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.023     0.003
+ *Command  15 * next time           v:   4.00       2.00       4.00    
+                                                         t=     0.023     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.023     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.023     0.003
+
+   Computing solution at time   5.0000E-01 using dt =  1.0000E-01
+   Total proportional load is   5.0000E-01
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.023     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.023     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.023     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.023     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3712E+03; D-min 0.1120E+02; Ratio 0.3315E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.023     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6250.04 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.177089606448871E-06 Current   =    4.177089606448871E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.023     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.023     0.003
+   Residual 1 norm =  2.3103404E-03 Rel =  5.2083301E-01 t=     0.024     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3656E+03; D-min 0.1130E+02; Ratio 0.3235E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.024     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6250.04 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.177089606448871E-06 Current   =    3.356171829393785E-09
+    Relative  =    8.034713510125093E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.024     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.024     0.003
+   Residual 1 norm =  6.7921433E-07 Rel =  1.5311910E-04 t=     0.024     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3655E+03; D-min 0.1136E+02; Ratio 0.3217E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.024     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6250.04 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.177089606448871E-06 Current   =    2.344228039755646E-14
+    Relative  =    5.612108574679533E-09 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.024     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.024     0.003
+   Residual 1 norm =  2.8445420E-10 Rel =  6.4126109E-08 t=     0.024     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3655E+03; D-min 0.1136E+02; Ratio 0.3217E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.024     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.177089606448871E-06 Current   =    4.620032408972454E-23
+    Relative  =    1.106041010429783E-17 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       4.00    
+                                                         t=     0.024     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.024     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.024     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.024     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.024     0.003
+   Residual 1 norm =  3.0262805E-16 Rel =  6.8223141E-14 t=     0.025     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3655E+03; D-min 0.1136E+02; Ratio 0.3217E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.025     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.02 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.177089606448871E-06 Current   =    7.157626527968093E-35
+    Relative  =    1.713543927072493E-29 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.025     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.025     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.025     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.025     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.025     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.025     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.025     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.025     0.003
+ *Command  15 * next time           v:   5.00       2.00       5.00    
+                                                         t=     0.025     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.025     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.025     0.003
+
+   Computing solution at time   6.0000E-01 using dt =  1.0000E-01
+   Total proportional load is   6.0000E-01
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.025     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.025     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.025     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.025     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3655E+03; D-min 0.1136E+02; Ratio 0.3217E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.026     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6250.04 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.221662713803878E-06 Current   =    4.221662713803878E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.026     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.026     0.003
+   Residual 1 norm =  2.3560552E-03 Rel =  5.3113876E-01 t=     0.026     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3599E+03; D-min 0.1145E+02; Ratio 0.3143E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.026     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  5999.98 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.221662713803878E-06 Current   =    3.434505327410782E-09
+    Relative  =    8.135432790925553E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.026     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.026     0.003
+   Residual 1 norm =  5.0728160E-07 Rel =  1.1435934E-04 t=     0.026     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3599E+03; D-min 0.1151E+02; Ratio 0.3127E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.026     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6250.04 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.221662713803878E-06 Current   =    1.341984657039519E-14
+    Relative  =    3.178805953994226E-09 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.026     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.026     0.003
+   Residual 1 norm =  1.4425506E-10 Rel =  3.2520229E-08 t=     0.027     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3599E+03; D-min 0.1151E+02; Ratio 0.3127E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.027     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.221662713803878E-06 Current   =    1.177300866979495E-23
+    Relative  =    2.788713705455409E-18 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       4.00    
+                                                         t=     0.027     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.027     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.027     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.027     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.027     0.003
+   Residual 1 norm =  4.0164933E-16 Rel =  9.0546064E-14 t=     0.027     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3599E+03; D-min 0.1151E+02; Ratio 0.3127E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.027     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6817.79 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.221662713803878E-06 Current   =    1.463156774085806E-34
+    Relative  =    3.465830582110731E-29 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.027     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.027     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.027     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.027     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.027     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.027     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.027     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.027     0.003
+ *Command  15 * next time           v:   6.00       2.00       6.00    
+                                                         t=     0.027     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.027     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.027     0.003
+
+   Computing solution at time   7.0000E-01 using dt =  1.0000E-01
+   Total proportional load is   7.0000E-01
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.027     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.027     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.027     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.028     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3599E+03; D-min 0.1151E+02; Ratio 0.3127E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.028     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.265923954669158E-06 Current   =    4.265923954669158E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.028     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.028     0.003
+   Residual 1 norm =  2.3987101E-03 Rel =  5.4075468E-01 t=     0.028     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3543E+03; D-min 0.1159E+02; Ratio 0.3058E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.028     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.265923954669158E-06 Current   =    3.509489812412451E-09
+    Relative  =    8.226798812414900E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.028     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.028     0.003
+   Residual 1 norm =  4.0662299E-07 Rel =  9.1667305E-05 t=     0.029     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3543E+03; D-min 0.1164E+02; Ratio 0.3044E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.029     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.265923954669158E-06 Current   =    8.372196732818435E-15
+    Relative  =    1.962575240858398E-09 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.029     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.029     0.003
+   Residual 1 norm =  7.9341554E-11 Rel =  1.7886412E-08 t=     0.029     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3543E+03; D-min 0.1164E+02; Ratio 0.3044E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.029     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.265923954669158E-06 Current   =    3.536204539681334E-24
+    Relative  =    8.289422355527157E-19 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       4.00    
+                                                         t=     0.029     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.029     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.029     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.029     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.029     0.003
+   Residual 1 norm =  4.3138076E-16 Rel =  9.7248588E-14 t=     0.029     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3543E+03; D-min 0.1164E+02; Ratio 0.3044E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.029     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.265923954669158E-06 Current   =    1.825987636553552E-34
+    Relative  =    4.280403626405399E-29 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.029     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.029     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.029     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.029     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.029     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.029     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.029     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.029     0.003
+ *Command  15 * next time           v:   7.00       2.00       7.00    
+                                                         t=     0.030     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.030     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.030     0.003
+
+   Computing solution at time   8.0000E-01 using dt =  1.0000E-01
+   Total proportional load is   8.0000E-01
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.030     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.030     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.030     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.030     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3543E+03; D-min 0.1164E+02; Ratio 0.3044E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.030     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6521.84 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.309714040752772E-06 Current   =    4.309714040752772E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.030     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.030     0.003
+   Residual 1 norm =  2.4395777E-03 Rel =  5.4996769E-01 t=     0.030     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3487E+03; D-min 0.1171E+02; Ratio 0.2978E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.030     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.309714040752772E-06 Current   =    3.582389997191101E-09
+    Relative  =    8.312361245585958E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.030     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.030     0.003
+   Residual 1 norm =  3.4601672E-07 Rel =  7.8004492E-05 t=     0.031     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3487E+03; D-min 0.1176E+02; Ratio 0.2965E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.031     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.309714040752772E-06 Current   =    5.658925695296563E-15
+    Relative  =    1.313062918278477E-09 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.031     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.031     0.003
+   Residual 1 norm =  4.6968673E-11 Rel =  1.0588412E-08 t=     0.031     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3487E+03; D-min 0.1176E+02; Ratio 0.2965E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.031     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.37 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.309714040752772E-06 Current   =    1.232521448770070E-24
+    Relative  =    2.859868281550270E-19 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       4.00    
+                                                         t=     0.031     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.031     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.031     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.031     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.031     0.003
+   Residual 1 norm =  6.8667830E-16 Rel =  1.5480175E-13 t=     0.032     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3487E+03; D-min 0.1176E+02; Ratio 0.2965E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.032     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6817.79 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.309714040752772E-06 Current   =    3.181606553136705E-34
+    Relative  =    7.382407563590872E-29 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.032     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.032     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.032     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.032     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.032     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.032     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.032     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.032     0.003
+ *Command  15 * next time           v:   8.00       2.00       8.00    
+                                                         t=     0.032     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.032     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.032     0.003
+
+   Computing solution at time   9.0000E-01 using dt =  1.0000E-01
+   Total proportional load is   9.0000E-01
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.032     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.032     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.032     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.032     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3487E+03; D-min 0.1176E+02; Ratio 0.2965E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.032     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.94 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.352906450266562E-06 Current   =    4.352906450266562E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.032     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.032     0.003
+   Residual 1 norm =  2.4793430E-03 Rel =  5.5893221E-01 t=     0.032     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3432E+03; D-min 0.1182E+02; Ratio 0.2902E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.033     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.94 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.352906450266562E-06 Current   =    3.653890147231980E-09
+    Relative  =    8.394138925288009E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.033     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.033     0.003
+   Residual 1 norm =  3.0938611E-07 Rel =  6.9746649E-05 t=     0.033     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3431E+03; D-min 0.1187E+02; Ratio 0.2890E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.033     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  7143.14 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.352906450266562E-06 Current   =    4.110392524527724E-15
+    Relative  =    9.442868969251599E-10 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.033     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.033     0.003
+   Residual 1 norm =  2.9686487E-11 Rel =  6.6923914E-09 t=     0.033     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3431E+03; D-min 0.1187E+02; Ratio 0.2890E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.033     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6250.52 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.352906450266562E-06 Current   =    4.904507468848213E-25
+    Relative  =    1.126720163845440E-19 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       4.00    
+                                                         t=     0.033     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.033     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.033     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.033     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.033     0.003
+   Residual 1 norm =  7.4917640E-16 Rel =  1.6889104E-13 t=     0.034     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3431E+03; D-min 0.1187E+02; Ratio 0.2890E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.034     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6521.84 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.352906450266562E-06 Current   =    3.874883231945256E-34
+    Relative  =    8.901829791696918E-29 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.034     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.034     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.034     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.034     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.034     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.034     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.034     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.034     0.003
+ *Command  15 * next time           v:   9.00       2.00       9.00    
+                                                         t=     0.034     0.003
+ *Command   2 * dt                  v:  0.100       0.00       0.00    
+                                                         t=     0.034     0.003
+   DT: equal linear increments = 1.000000E-01
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.034     0.003
+
+   Computing solution at time   1.0000E+00 using dt =  1.0000E-01
+   Total proportional load is   1.0000E+00
+ *Command   4 * loop augment        v:   3.00       10.0       0.00    
+                                                         t=     0.034     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.034     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.034     0.003
+   Residual 1 norm =  4.4358563E-03 Rel =  1.0000000E+00 t=     0.034     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3431E+03; D-min 0.1187E+02; Ratio 0.2890E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.034     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.94 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.395396241477100E-06 Current   =    4.395396241477100E-06
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.034     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.034     0.003
+   Residual 1 norm =  2.5183858E-03 Rel =  5.6773384E-01 t=     0.035     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3377E+03; D-min 0.1193E+02; Ratio 0.2830E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.035     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.03 , System =         0.00
+--> SOLVE AT  6818.94 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.395396241477100E-06 Current   =    3.724337058811768E-09
+    Relative  =    8.473268060947745E-04 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   2.00       6.00       2.00    
+                                                         t=     0.035     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.035     0.003
+   Residual 1 norm =  2.8771381E-07 Rel =  6.4860940E-05 t=     0.035     0.003
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.3377E+03; D-min 0.1198E+02; Ratio 0.2819E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.035     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.04 , System =         0.00
+--> SOLVE AT  6818.94 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.395396241477100E-06 Current   =    3.176810601241622E-15
+    Relative  =    7.227586380640020E-10 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   3.00       6.00       3.00    
+                                                         t=     0.035     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.035     0.003
+   Residual 1 norm =  1.9879452E-11 Rel =  4.4815366E-09 t=     0.035     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3377E+03; D-min 0.1198E+02; Ratio 0.2819E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.036     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.04 , System =         0.00
+--> SOLVE AT  6818.94 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.395396241477100E-06 Current   =    2.193781109718451E-25
+    Relative  =    4.991088377918840E-20 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       4.00    
+                                                         t=     0.036     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.036     0.003
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.036     0.003
+ *Command   5 * loop newton         v:   120.       8.00       0.00    
+                                                         t=     0.036     0.003
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.036     0.003
+   Residual 1 norm =  7.9032488E-16 Rel =  1.7816738E-13 t=     0.036     0.003
+      Convergence: Equations  norm   = T
+      Convergence: Individual groups = T
+ Condition check: D-max 0.3377E+03; D-min 0.1198E+02; Ratio 0.2819E+02
+ Maximum no. diagonal digits lost:  2 in reducing equation     231
+   End Triangular Decomposition                          t=     0.036     0.003
+   Number of operations =  150002 plus        0 Mega-ops
+  Time: CPU =         0.04 , System =         0.00
+--> SOLVE AT  6817.79 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    4.395396241477100E-06 Current   =    5.017745555552380E-34
+    Relative  =    1.141591174011228E-28 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = T
+      Convergence: Individual groups = T
+ *Command   7 * next newton         v:   120.       6.00       1.00    
+                                                         t=     0.036     0.003
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.036     0.003
+ *Command   9 * next augment        v:   2.00       5.00       2.00    
+                                                         t=     0.036     0.003
+
+   Augmented iteration converged in loop =   2: Maximum gap =  0.0000E+00
+
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.036     0.003
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.036     0.003
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.036     0.003
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.036     0.003
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.036     0.003
+ *Command  15 * next time           v:   10.0       2.00       10.0    
+                                                         t=     0.036     0.003
+ *Command  16 * stre ne             v:   1.00       0.00       0.00    
+                                                         t=     0.036     0.003
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)            
+
+     Mixed Element Stresses
+
+    Elmt Mat    1-Coord    2-Coord    3-Coord
+     Cauchy   11-Stress  22-Stress  33-Stress  12-Stress  23-Stress  13-Stress
+     Almansi  11-Strain  22-Strain  33-Strain  12-Strain  23-Strain  31-Strain
+               1-Stress   2-Stress   3-Stress  log(lam1)  log(lam2)  log(lam3)
+                  log-J     eff-ep  Yld/1-Fib    2-Fiber    3-Fiber
+
+       1   1 -1.093E-02 -6.853E-04  1.008E-03
+     Cauchy   3.468E+01  2.392E+03 -3.654E+01 -2.591E+02 -1.001E+00 -3.809E+01
+     Almansi -4.370E-02  1.090E-01 -4.946E-02 -3.358E-02 -3.457E-04 -6.951E-03
+              2.420E+03  2.865E+01 -5.866E+01  1.145E-01 -5.254E-02 -5.983E-02
+              2.116E-03  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+       1   1 -1.096E-02 -6.850E-04  3.762E-03
+     Cauchy   3.416E+01  2.388E+03 -3.326E+01 -2.606E+02 -5.140E+00  4.086E+01
+     Almansi -4.389E-02  1.087E-01 -4.930E-02 -3.379E-02 -4.426E-04  7.419E-03
+              2.417E+03  3.072E+01 -5.836E+01  1.143E-01 -5.237E-02 -5.981E-02
+              2.116E-03  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+       1   1 -1.371E-02 -8.266E-04  3.713E-03
+     Cauchy   2.662E+02  1.981E+03  3.728E+01 -2.338E+02 -8.171E+00  4.470E+01
+     Almansi -4.390E-02  7.298E-02 -6.391E-02 -3.185E-02 -9.200E-04  8.011E-03
+              2.013E+03  2.439E+02  2.814E+01  8.969E-02 -3.500E-02 -5.258E-02
+              2.116E-03  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+       1   1 -1.368E-02 -8.269E-04  9.948E-04
+     Cauchy   2.668E+02  1.984E+03  3.397E+01 -2.327E+02 -1.750E+00 -3.747E+01
+     Almansi -4.370E-02  7.327E-02 -6.407E-02 -3.169E-02 -4.443E-04 -6.761E-03
+              2.015E+03  2.426E+02  2.727E+01  8.987E-02 -3.510E-02 -5.265E-02
+              2.116E-03  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+       1   1 -1.069E-02 -2.557E-03  1.009E-03
+     Cauchy   5.854E+01  2.351E+03 -1.170E+01 -4.803E+02 -7.124E-01 -3.809E+01
+     Almansi -4.423E-02  1.052E-01 -4.810E-02 -6.260E-02 -4.921E-04 -6.930E-03
+              2.448E+03  1.485E+01 -6.461E+01  1.161E-01 -5.368E-02 -6.033E-02
+              2.116E-03  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+       1   1 -1.072E-02 -2.557E-03  3.766E-03
+     Cauchy   5.839E+01  2.347E+03 -8.609E+00 -4.816E+02 -7.911E+00  3.955E+01
+     Almansi -4.438E-02  1.049E-01 -4.795E-02 -6.281E-02 -6.287E-04  7.103E-03
+              2.444E+03  1.636E+01 -6.390E+01  1.159E-01 -5.356E-02 -6.027E-02
+              2.116E-03  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+       1   1 -1.340E-02 -3.085E-03  3.720E-03
+     Cauchy   2.830E+02  1.943E+03  6.452E+01 -4.155E+02 -9.965E+00  4.361E+01
+     Almansi -4.418E-02  6.954E-02 -6.184E-02 -5.692E-02 -1.005E-03  7.732E-03
+              2.041E+03  1.970E+02  5.217E+01  9.147E-02 -3.877E-02 -5.059E-02
+              2.116E-03  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+       1   1 -1.337E-02 -3.086E-03  9.966E-04
+     Cauchy   2.834E+02  1.946E+03  6.136E+01 -4.146E+02 -1.026E+00 -3.744E+01
+     Almansi -4.401E-02  6.983E-02 -6.200E-02 -5.676E-02 -4.962E-04 -6.729E-03
+              2.044E+03  1.958E+02  5.133E+01  9.164E-02 -3.887E-02 -5.066E-02
+              2.116E-03  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+       1   2 -1.098E-02 -6.047E-04  1.057E-03
+     Cauchy  -4.993E+02 -9.054E-02 -1.145E-02  6.724E+00  3.220E-02 -2.391E+00
+     Almansi -4.370E-02  1.090E-01 -4.946E-02 -3.358E-02 -3.457E-04 -6.951E-03
+              2.911E-06 -2.911E-06 -4.995E+02  1.253E-01 -4.171E-02 -4.900E-02
+              3.460E-02  0.000E+00 -4.995E+02  0.000E+00  0.000E+00
+
+       1   2 -1.098E-02 -6.047E-04  3.943E-03
+     Cauchy  -4.997E+02 -9.049E-02 -1.596E-01  6.724E+00  1.202E-01 -8.931E+00
+     Almansi -4.389E-02  1.087E-01 -4.930E-02 -3.379E-02 -4.426E-04  7.419E-03
+              2.842E-14  2.842E-14 -4.999E+02  1.250E-01 -4.166E-02 -4.910E-02
+              3.422E-02  0.000E+00 -4.999E+02  0.000E+00  0.000E+00
+
+       1   2 -1.384E-02 -7.626E-04  3.943E-03
+     Cauchy  -5.304E+02 -6.041E-02 -1.700E-01  5.660E+00  1.013E-01 -9.495E+00
+     Almansi -4.390E-02  7.298E-02 -6.391E-02 -3.185E-02 -9.200E-04  8.011E-03
+              1.631E-06 -1.631E-06 -5.306E+02  8.140E-02 -4.329E-02 -6.087E-02
+             -2.276E-02  0.000E+00 -5.306E+02  0.000E+00  0.000E+00
+
+       1   2 -1.384E-02 -7.626E-04  1.057E-03
+     Cauchy  -5.300E+02 -6.044E-02 -1.219E-02  5.660E+00  2.714E-02 -2.542E+00
+     Almansi -4.370E-02  7.327E-02 -6.407E-02 -3.169E-02 -4.443E-04 -6.761E-03
+              1.634E-06 -1.634E-06 -5.301E+02  8.170E-02 -4.328E-02 -6.082E-02
+             -2.240E-02  0.000E+00 -5.301E+02  0.000E+00  0.000E+00
+
+       1   2 -1.076E-02 -2.257E-03  1.057E-03
+     Cauchy  -4.745E+02 -1.196E+00 -1.044E-02  2.382E+01  1.117E-01 -2.225E+00
+     Almansi -4.423E-02  1.052E-01 -4.810E-02 -6.260E-02 -4.921E-04 -6.930E-03
+              2.029E-06 -2.029E-06 -4.757E+02  1.261E-01 -4.369E-02 -5.034E-02
+              3.208E-02  0.000E+00 -4.757E+02  0.000E+00  0.000E+00
+
+       1   2 -1.076E-02 -2.257E-03  3.943E-03
+     Cauchy  -4.745E+02 -1.194E+00 -1.454E-01  2.380E+01  4.166E-01 -8.305E+00
+     Almansi -4.438E-02  1.049E-01 -4.795E-02 -6.281E-02 -6.287E-04  7.103E-03
+              1.434E-06 -1.434E-06 -4.758E+02  1.258E-01 -4.368E-02 -5.040E-02
+              3.174E-02  0.000E+00 -4.758E+02  0.000E+00  0.000E+00
+
+       1   2 -1.357E-02 -2.846E-03  3.943E-03
+     Cauchy  -5.113E+02 -8.095E-01 -1.585E-01  2.034E+01  3.582E-01 -9.003E+00
+     Almansi -4.418E-02  6.954E-02 -6.184E-02 -5.692E-02 -1.005E-03  7.732E-03
+              2.767E-06 -2.767E-06 -5.123E+02  8.277E-02 -4.747E-02 -5.929E-02
+             -2.400E-02  0.000E+00 -5.123E+02  0.000E+00  0.000E+00
+
+       1   2 -1.357E-02 -2.846E-03  1.057E-03
+     Cauchy  -5.113E+02 -8.105E-01 -1.138E-02  2.036E+01  9.603E-02 -2.412E+00
+     Almansi -4.401E-02  6.983E-02 -6.200E-02 -5.676E-02 -4.962E-04 -6.729E-03
+              2.842E-14  2.842E-14 -5.121E+02  8.305E-02 -4.746E-02 -5.925E-02
+             -2.367E-02  0.000E+00 -5.121E+02  0.000E+00  0.000E+00
+ *End of Solution Execution*                             t=     0.036     0.003
+ *Command   1 * plot wipe           v:   0.00       0.00       0.00    
+                                                         t=     0.037     0.003
+ *Command   1 * plot cart           v:   0.00       0.00       0.00    
+                                                         t=     0.037     0.003
+ *Command   1 * plot mesh           v:   0.00       0.00       0.00    
+                                                         t=     0.037     0.003
+ *Command   1 * plot unde           v:   0.00       0.00       0.00    
+                                                         t=     0.037     0.004
+ *Command   1 * plot mesh           v:   0.00       0.00       0.00    
+                                                         t=     0.037     0.004
+ *End of Solution Execution*                             t=     0.051     0.005
+
+ *End of <FEAP> solution,  File: OLpFs                                                                                                                           
+

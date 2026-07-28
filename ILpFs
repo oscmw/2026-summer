@@ -1,0 +1,140 @@
+FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)
+ 0 0 0 3 3 8
+
+PARAmeter
+ pi = acos(-1)     ! pi number
+ pr = 1.0d+3	   ! internal pressure (Pa)
+ be = 0  	   ! in-plane fiber angle (axial planes)
+ Em = 2.0d+4   	   ! Ground elastic modulus at zero strain (Pa)
+ nu = 4.900d-1     ! Ground Poisson's ratio
+ rh = 1.06d+3  	   ! Ground density
+ h1 = 3.5d+3   	   ! Fiber parameter
+ h2 = 1.25d-0  	   ! Fiber parameter
+ dt = 1.0d-1 	   ! mechanical time step increment
+ dd = 1.0d-3  	   ! chemical time step increment (N/A in this analysis)
+ ta = 1.0d-0       ! end time
+ la = 3       	   ! number of steps in augment loop (if applies)
+ ln = 120      	   ! number of steps in newton iteration loops (max)
+ ne = 1 	   ! probe element
+ mi = 2		   ! 0 : mixed off, 2 : mixed on
+
+MATErial,1
+ SOLId
+ FINIte VOLUme 2
+ MIXEd
+ ELAStic NEOHook Em nu           ! E and nu
+ DENSity mass rh                 ! rho
+ MASS CONSistent
+! GROUp force g*rh 1 0 0 0 0
+                                              ! Blank termination record
+MATErial,2
+ SOLId FIBEr 1
+ ELAStic HOLZapfel h1 h2 cos(be) sin(be) 0 
+                                              ! Blank termination record
+NOPRint
+INCLude ringT24R1
+INCLude struDc
+PRINt
+
+BOUNdary restraints
+ 1 0 1 1 1
+ 4 0 0 1 0
+
+EBOUNdary restraints
+ 3 0.0 0 0 1
+
+LOAD PROP 1
+ CSURface  ! Coordinate based SURFace 3rd Quadrant
+  POLAr
+  SURFace
+   1  0.010  -180  .000  -pr
+   2  0.010  -180  .005  -pr
+   3  0.010   -90  .005  -pr
+   4  0.010   -90  .000  -pr
+
+ CSURface  ! Coordinate based SURFace 4th Quadrant
+  POLAr
+  SURFace
+   1  0.010   -90  .000  -pr
+   2  0.010   -90  .005  -pr
+   3  0.010   -00  .005  -pr
+   4  0.010   -00  .000  -pr
+
+ CSURface  ! Coordinate based SURFace 1st Quadrant
+  POLAr
+  SURFace
+   1  0.010   -00  .000  -pr
+   2  0.010   -00  .005  -pr
+   3  0.010    90  .005  -pr
+   4  0.010    90  .000  -pr
+
+ CSURface  ! Coordinate based SURFace 2nd Quadrant
+  POLAr
+  SURFace
+   1  0.010    90  .000  -pr
+   2  0.010    90  .005  -pr
+   3  0.010   180  .005  -pr
+   4  0.010   180  .000  -pr
+
+LOAD END
+END
+
+BATCh
+ PLOT,HIDE
+ PLOT,MESH
+ PLOT,AXIS
+END
+
+INTE
+!STOP
+
+BATCh
+ PROP,,1
+END
+2 2
+0,0 ta,1
+
+BATCh
+ LOOP time 10
+  DT,,dt
+  TIME
+   LOOP,augment,la
+     LOOP newton ln
+      TANG,,1
+     NEXT newton
+     AUGMent
+   NEXT,augment
+  PLOT WIPE
+  PLOT UNDE
+  PLOT MESH
+  PLOT,DEFO,1,1
+  PLOT,MESH
+!  PLOT JPEG
+!  PVIEw TIME
+ NEXT time
+ STRE,ne,1
+END
+
+INTEractive
+STOP
+
+! AUXILIARY BATCH GROUPS
+EFORce
+ POLAr
+ 1 0.010 pr 0 0 
+
+ CSURface  ! Coordinate based SURFace
+  GAP,1.d-3
+  SURFace
+   1  0.015  0.015 0.005  pr
+   2 -0.015  0.015 0.005  pr
+   3 -0.015 -0.015 0.005  pr
+   4  0.015 -0.015 0.005  pr
+
+BATCh
+ PLOT,PERS,1
+END
+0
+.10, .03, .20
+.10, .20, .50
+
