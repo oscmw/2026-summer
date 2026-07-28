@@ -1,0 +1,314 @@
+ FEAP: 2-D Truss Problem                                                        
+
+     Solution date: Tue Jul 28 13:57:06 2026
+
+              Release 8.7.1b      
+              03 July 2026        
+
+     Input Data Filename: Itruss_2d                                                                                                                       
+
+     Number of Nodal Points  - - - - - - :        5
+     Number of Elements  - - - - - - - - :        7
+
+     Spatial Dimension of Mesh - - - - - :        2
+     Degrees-of-Freedom/Node (Maximum) - :        2
+     Equations/Element       (Maximum) - :        0
+     Number Element Nodes    (Maximum) - :        2
+
+     Number of Material Sets - - - - - - :        2
+     Number Parameters/Set   (Program) - :      350
+     Number Parameters/Set   (Users  ) - :      150
+
+     Number Added Element Equations  - - :        0
+
+ FEAP: 2-D Truss Problem                                                       
+
+   M a t e r i a l    P r o p e r t i e s
+
+     Material Set Number   1: Element Type: TRUSS:                           
+     Degree of Freedom Assignments    Local    Global
+                                     Number    Number
+                                        1         1
+                                        2         2
+
+         T r u s s    E l e m e n t
+
+     M e c h a n i c a l   P r o p e r t i e s
+
+          Truss & Frame Analysis
+
+          Modulus E        1.00000E+03
+          Poisson ratio    0.00000
+
+          Density          0.00000E+00
+
+          1-Gravity Load   0.00000E+00
+          2-Gravity Load   0.00000E+00
+          3-Gravity Load   0.00000E+00
+
+     C r o s s   S e c t i o n   P a r a m e t e r s
+
+          Area          1.00000E+01
+
+     C o n s t i t u t i v e    S t a r t
+
+          Start state  : Elastic
+
+     E l e m e n t    M o d e l
+
+          Formulation  : Small Deformation.
+          Plot Output  : On
+          Interpolation: Lagrangian Polynomials
+          History terms/pt  =     0
+
+     W a r n i n g s   &   E r r o r s
+          Material density is zero.
+
+ FEAP: 2-D Truss Problem                                                       
+
+   M a t e r i a l    P r o p e r t i e s
+
+     Material Set Number   2: Element Type: TRUSS:                           
+     Degree of Freedom Assignments    Local    Global
+                                     Number    Number
+                                        1         1
+                                        2         2
+
+         T r u s s    E l e m e n t
+
+     M e c h a n i c a l   P r o p e r t i e s
+
+          Truss & Frame Analysis
+
+          Modulus E        1.00000E+03
+          Poisson ratio    0.00000
+
+          Density          0.00000E+00
+
+          1-Gravity Load   0.00000E+00
+          2-Gravity Load   0.00000E+00
+          3-Gravity Load   0.00000E+00
+
+     C r o s s   S e c t i o n   P a r a m e t e r s
+
+          Area          5.00000E+00
+
+     C o n s t i t u t i v e    S t a r t
+
+          Start state  : Elastic
+
+     E l e m e n t    M o d e l
+
+          Formulation  : Small Deformation.
+          Plot Output  : On
+          Interpolation: Lagrangian Polynomials
+          History terms/pt  =     0
+
+     W a r n i n g s   &   E r r o r s
+          Material density is zero.
+
+ FEAP: 2-D Truss Problem                                                       
+
+     Coordinate scaling factors =   1.0000E+00  1.0000E+00
+     Nodal Coordinates   
+
+      Node    1 Coord    2 Coord
+         1  0.000E+00  0.000E+00
+         2  2.000E+02  0.000E+00
+         3  4.000E+02  0.000E+00
+         4  1.000E+02  1.600E+02
+         5  3.000E+02  1.600E+02
+
+          Part(   1) = PART0001       
+
+ FEAP: 2-D Truss Problem                                                       
+
+     E l e m e n t   C o n n e c t i o n s 
+
+    Elmt Mat Reg  Type  1 Node  2 Node
+       1   1   0 Lines       1       2
+       2   1   0 Lines       2       3
+       3   1   0 Lines       1       4
+       4   2   0 Lines       2       4
+       5   2   0 Lines       2       5
+       6   1   0 Lines       3       5
+       7   1   0 Lines       4       5
+
+          Part(   1): Elm start =       1
+                      Elm last  =       7
+                      Nodes/el. =       2
+
+ FEAP: 2-D Truss Problem                                                       
+
+  N o d a l   B. C.
+
+      Node 1-b.c. 2-b.c.
+         1      1      1
+         3      0      1
+
+ FEAP: 2-D Truss Problem                                                       
+
+     Nodal Forces        
+
+      Node    1 Force    2 Force
+         5  0.000E+00 -1.000E+01
+
+     E l e m e n t   S i z e   V a l u e s
+          h-minimum =  2.0000E+02
+          h-maximum =  2.0000E+02
+
+    Material  Element Set  Element Type  NH1/2 History  NH3 History  NH4 History
+         1            1     Truss                 0            4            0
+         2            2     Truss                 0            4            0
+
+     P a r t i t i o n   1
+
+     E q u a t i o n / P r o b l e m   S u m m a r y:
+
+       Mesh dimension  (ndm) =         2 :  Number nodes     =               5
+       Number dof/node (ndf) =         2 :  Number elements  =               7
+       Element eqs.   (nadd) =         0 :  Number materials =               2
+       Number rigid bodies   =         0 :  Number equations =               7
+                                         :  Number global eq =               0
+       Number joints         =         0 :  Number tang terms=              21
+       Transient integrator  = Static    :  Average col. ht. =               4
+
+
+  ---------------------------- END OF MESH INPUTS ----------------------------
+
+
+ FEAP: 2-D Truss Problem                                                       
+
+     Solution Commands       Variable 1  Variable 2  Variable 3
+       comm      Truss_sta   0.0000E+00  0.0000E+00  0.0000E+00
+       TANGent               1.0000E+00  0.0000E+00  0.0000E+00
+       DISPlacem ALL         0.0000E+00  0.0000E+00  0.0000E+00
+       STREss    ALL         0.0000E+00  0.0000E+00  0.0000E+00
+       plot      hfram       1.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      CONTour     2.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      BOUN        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      LOAD        0.0000E+00  0.0000E+00  0.0000E+00
+       plot      hfram       2.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      ESTRess     1.0000E+00  0.0000E+00  0.0000E+00
+ *Command   1 * comm Truss_static_ldv:   0.00       0.00       0.00    
+                                                         t=     0.002     0.005
+ *Command   2 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.002     0.005
+   Residual 1 norm =  1.0000000E+01 Rel =  1.0000000E+00 t=     0.002     0.005
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ Condition check: D-max 0.1149E+03; D-min 0.2368E+02; Ratio 0.4852E+01
+ Maximum no. diagonal digits lost:  1 in reducing equation       3
+   End Triangular Decomposition                          t=     0.002     0.005
+   Number of operations =     142 plus        0 Mega-ops
+  Time: CPU =         0.00 , System =         0.00
+--> SOLVE AT    35.50 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    2.979441502059088E+00 Current   =    2.979441502059088E+00
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   3 * disp ALL            v:   0.00       0.00       0.00    
+                                                         t=     0.002     0.005
+
+ FEAP: 2-D Truss Problem                                                       
+
+  N o d a l   D i s p l a c e m e n t s     Time       0.00000E+00
+                                            Prop. Ld.  1.00000E+00
+                                            Type: Real     
+
+    Node     1 Coord     2 Coord     1 Displ     2 Displ
+       1  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+       2  2.0000E+02  0.0000E+00  3.1250E-02 -2.0932E-01
+       3  4.0000E+02  0.0000E+00  1.2500E-01  0.0000E+00
+       4  1.0000E+02  1.6000E+02  2.5648E-02 -8.1626E-02
+       5  3.0000E+02  1.6000E+02 -3.6852E-02 -2.9794E-01
+ *Command   4 * stre ALL            v:   0.00       0.00       0.00    
+                                                         t=     0.002     0.005
+ FEAP: 2-D Truss Problem                                                         
+
+         Truss Element
+
+ Elmt Matl    1-coord    2-coord    3-coord     Force         Strain          Flux
+    1    1  1.000E+02  0.000E+00  0.000E+00   1.56250E+00   1.56250E-04   0.00000E+00
+    2    1  3.000E+02  0.000E+00  0.000E+00   4.68750E+00   4.68750E-04   0.00000E+00
+    3    1  5.000E+01  8.000E+01  0.000E+00  -2.94812E+00  -2.94812E-04   0.00000E+00
+    4    2  1.500E+02  8.000E+01  0.000E+00   2.94812E+00   5.89624E-04   0.00000E+00
+    5    2  2.500E+02  8.000E+01  0.000E+00  -2.94812E+00  -5.89624E-04   0.00000E+00
+    6    1  3.500E+02  8.000E+01  0.000E+00  -8.84436E+00  -8.84436E-04   0.00000E+00
+    7    1  2.000E+02  1.600E+02  0.000E+00  -3.12500E+00  -3.12500E-04   0.00000E+00
+ *Command   5 * plot hfram          v:   1.00       0.00       0.00    
+                                                         t=     0.002     0.005
+ *Command   6 * plot CONTour        v:   2.00       0.00       0.00    
+                                                         t=     0.004     0.005
+    Minimum is  -2.98E-01 Maximum is   0.00E+00
+ *Command   7 * plot BOUN           v:   0.00       0.00       0.00    
+                                                         t=     0.004     0.005
+ *Command   8 * plot LOAD           v:   0.00       0.00       0.00    
+                                                         t=     0.004     0.005
+ *Command   9 * plot hfram          v:   2.00       0.00       0.00    
+                                                         t=     0.004     0.005
+ *Command  10 * plot ESTRess        v:   1.00       0.00       0.00    
+                                                         t=     0.004     0.005
+ Projected values are set to REAL
+
+    Minimum is  -5.98E+00 Maximum is   3.13E+00
+ *End of Solution Execution*                             t=     0.004     0.005
+ *Command   1 * plot BOUN           v:   0.00       0.00       0.00    
+                                                         t=     0.010     0.021
+ *Command   1 * plot LOAD           v:   0.00       0.00       0.00    
+                                                         t=     0.010     0.022
+ *Command   1 * plot HFRA           v:   1.00       0.00       0.00    
+                                                         t=     0.010     0.022
+ *Command   1 * plot CONT           v:   1.00       0.00       0.00    
+                                                         t=     0.011     0.022
+    Minimum is  -3.69E-02 Maximum is   1.25E-01
+ *Command   1 * plot defo           v:   10.0       0.00       0.00    
+                                                         t=     0.016     0.034
+  -> Plots on deformed mesh with scale: 1.00000E+01
+                     Eigenvector scale: 0.00000E+00
+ *Command   1 * plot defo           v:   10.0       0.00       0.00    
+                                                         t=     0.016     0.034
+  -> Plots on deformed mesh with scale: 1.00000E+01
+                     Eigenvector scale: 0.00000E+00
+ *Command   1 * plot defo           v:   10.0       0.00       0.00    
+                                                         t=     0.016     0.034
+  -> Plots on deformed mesh with scale: 1.00000E+01
+                     Eigenvector scale: 0.00000E+00
+ *Command   1 * plot mesh           v:   0.00       0.00       0.00    
+                                                         t=     0.016     0.034
+ *Command   1 * plot wipe           v:   0.00       0.00       0.00    
+                                                         t=     0.016     0.035
+ *Command   1 * plot hfra           v:   1.00       0.00       0.00    
+                                                         t=     0.016     0.035
+ *Command   1 * plot defo           v:   10.0       0.00       0.00    
+                                                         t=     0.016     0.035
+  -> Plots on deformed mesh with scale: 1.00000E+01
+                     Eigenvector scale: 0.00000E+00
+ *Command   1 * plot contour        v:   2.00       0.00       0.00    
+                                                         t=     0.016     0.036
+    Minimum is  -2.98E-01 Maximum is   0.00E+00
+ *Command   1 * plot wipe           v:   0.00       0.00       0.00    
+                                                         t=     0.017     0.036
+ *Command   1 * plot defo           v:   50.0       0.00       0.00    
+                                                         t=     0.017     0.036
+  -> Plots on deformed mesh with scale: 5.00000E+01
+                     Eigenvector scale: 0.00000E+00
+ *Command   1 * plot cont           v:   2.00       0.00       0.00    
+                                                         t=     0.017     0.036
+    Minimum is  -2.98E-01 Maximum is   0.00E+00
+ *Command   1 * plot bon            v:   0.00       0.00       0.00    
+                                                         t=     0.017     0.036
+ *Command   1 * plot boun           v:   0.00       0.00       0.00    
+                                                         t=     0.018     0.037
+ *Command   1 * plot load           v:   0.00       0.00       0.00    
+                                                         t=     0.018     0.037
+ *Command   1 * plot estr           v:   1.00       0.00       0.00    
+                                                         t=     0.018     0.037
+ Projected values are set to REAL
+
+    Minimum is  -5.98E+00 Maximum is   3.13E+00
+ *End of Solution Execution*                             t=     0.030     0.062
+
+ *End of <FEAP> solution,  File: Otruss_2d                                                                                                                       
+
