@@ -1,0 +1,158 @@
+FEAP *** inflated fiber reinforced soft ring - circum. b.c. top surf. linked in z
+ 0 0 0 3 3 8
+
+PARAmeter
+ pi = acos(-1)     ! pi number
+ pr = 1.0e+5    ! internal pressure
+ ri = 0.010        ! inner radius
+ ro = 0.015        ! outer radius
+ ht = 0.005       ! ring thickness
+ nl = 6		   ! number of layers
+ lt = ht/nl        ! layer thickness
+ to = ri/100	   ! nodal gap tolerance 
+ Em = 1.0d+6	   ! Ground elastic modulus at zero strain (Pa)
+ nu = 4.200d-1     ! Ground Poisson's ratio
+ rh = 1.06d+3      ! density
+ dt = 1.0d-1 	   ! mechanical time step increment
+ ta = 1.0          ! rise time
+ ln = 50	   ! newton iteration limit
+ la = 3		   ! augment iteration count
+
+MATErial,1
+ SOLID 
+ ELAStic ISOTropic Em nu 	 ! E and nu
+ DENSity mass rh                 ! rho
+                                 ! Blank termination record
+MATErial,2
+ PRESsure
+ LOAD,,pr,1	                 
+ PLOT ON
+ FOLLower 1
+                                 ! Blank termination record
+SWEEp
+ Isect.rev
+ CYLI 96 4
+ CENT 0 0 0
+ 1   0.0  0.0
+ 2 360.0  0.0
+                                 ! Blank termination record
+CANGle
+ POLAr,0,0,0
+  SURFace
+   1     ri  -180  .000  -180
+   2     ri  -180    ht  -180
+   3     ri   -90    ht   -90
+   4     ri   -90  .000   -90
+  SURFace
+   1     ri   -90  .000  -90
+   2     ri   -90    ht  -90
+   3     ri   -00    ht  -00
+   4     ri   -00  .000  -00
+  SURFace
+   1     ri   -00  .000  -00
+   2     ri   -00    ht  -00
+   3     ri    90    ht   90
+   4     ri    90  .000   90
+  SURFace
+   1     ri    90  .000   90
+   2     ri    90    ht   90
+   3     ri   180    ht  180
+   4     ri   180  .000  180
+                                 ! Blank termination record
+EBOUndary
+   3    0.0  0 0 1
+                                 ! Blank termination record
+CBOUndary
+ POLAr
+ SURFace,0,1,0
+   1     ri-to   -180    0.
+   2     ri-to    -90    0.
+   3     ri+to    -90    0.
+   4     ri+to   -180    0.
+ SURFace,0,1,0
+   1     ri-to    -90    0.
+   2     ri-to      0    0.
+   3     ri+to      0    0.
+   4     ri+to    -90    0.
+ SURFace,0,1,0
+   1     ri-to      0    0.
+   2     ri-to     90    0.
+   3     ri+to     90    0.
+   4     ri+to      0    0.
+ SURFace,0,1,0
+   1     ri-to     90    0.
+   2     ri-to    180    0.
+   3     ri+to    180    0.
+   4     ri+to     90    0.
+                                 ! Blank termination record
+END MESH
+
+TIE
+
+SLINk
+ 3 ht ht 1 1 0
+
+BATCh
+PROP,,1
+END
+2 2
+0,0,ta,1.
+
+BATCh
+ CYLI
+ TPLOT,,1
+END
+ STRE,8,1
+ STRE,8,2
+ STRE,8,3
+ STRE,8,4
+ STRE,8,5
+ STRE,8,6
+ DISP,50,1
+ DISP,50,2
+ DISP,50,3
+ DISP,1358,1
+ DISP,1358,2
+ DISP,1358,3
+ 
+BATCh
+ PLOT,PERS,1
+END
+0
+0, 0,.3
+1, 0, 0
+
+BATCh
+ PLOT,HIDE
+ PLOT,MESH
+ PLOT,AXIS
+ PLOT,CYLI
+ PLOT,DEFO
+END
+
+!INTE
+
+BATCh
+ cyli,0,0,0
+ LOOP time 10
+  DT,,dt
+  TIME
+   LOOP,augment,la
+     AUGMent
+     LOOP newton ln
+      UTANG,,1
+     NEXT newton
+   NEXT,augment
+ PLOT WIPE
+ PLOT UNDE
+ PLOT MESH
+ PLOT,DEFO,1,1
+!  PLOT JPEG
+!  PVIEw TIME
+ STRE,ne,1
+ NEXT time
+
+END
+
+INTEractive
+STOP

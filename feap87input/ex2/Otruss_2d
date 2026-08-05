@@ -1,6 +1,6 @@
  FEAP: 2-D Truss Problem                                                        
 
-     Solution date: Tue Jul 28 13:57:06 2026
+     Solution date: Sun Aug  2 14:16:23 2026
 
               Release 8.7.1b      
               03 July 2026        
@@ -191,25 +191,25 @@
        plot      hfram       2.0000E+00  0.0000E+00  0.0000E+00
        PLOT      ESTRess     1.0000E+00  0.0000E+00  0.0000E+00
  *Command   1 * comm Truss_static_ldv:   0.00       0.00       0.00    
-                                                         t=     0.002     0.005
+                                                         t=     0.011     0.004
  *Command   2 * tang                v:   1.00       0.00       0.00    
-                                                         t=     0.002     0.005
-   Residual 1 norm =  1.0000000E+01 Rel =  1.0000000E+00 t=     0.002     0.005
+                                                         t=     0.011     0.004
+   Residual 1 norm =  1.0000000E+01 Rel =  1.0000000E+00 t=     0.011     0.004
       Convergence: Equations  norm   = F
       Convergence: Individual groups = F
  Condition check: D-max 0.1149E+03; D-min 0.2368E+02; Ratio 0.4852E+01
  Maximum no. diagonal digits lost:  1 in reducing equation       3
-   End Triangular Decomposition                          t=     0.002     0.005
+   End Triangular Decomposition                          t=     0.011     0.004
    Number of operations =     142 plus        0 Mega-ops
-  Time: CPU =         0.00 , System =         0.00
---> SOLVE AT    35.50 Mflops. Time=        0.00
+  Time: CPU =         0.01 , System =         0.00
+--> SOLVE AT     3.23 Mflops. Time=        0.00
    Energy convergence check
     Initial   =    2.979441502059088E+00 Current   =    2.979441502059088E+00
     Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
       Convergence: Energy |R*u| norm = F
       Convergence: Individual groups = F
  *Command   3 * disp ALL            v:   0.00       0.00       0.00    
-                                                         t=     0.002     0.005
+                                                         t=     0.011     0.004
 
  FEAP: 2-D Truss Problem                                                       
 
@@ -224,7 +224,7 @@
        4  1.0000E+02  1.6000E+02  2.5648E-02 -8.1626E-02
        5  3.0000E+02  1.6000E+02 -3.6852E-02 -2.9794E-01
  *Command   4 * stre ALL            v:   0.00       0.00       0.00    
-                                                         t=     0.002     0.005
+                                                         t=     0.011     0.004
  FEAP: 2-D Truss Problem                                                         
 
          Truss Element
@@ -238,77 +238,19 @@
     6    1  3.500E+02  8.000E+01  0.000E+00  -8.84436E+00  -8.84436E-04   0.00000E+00
     7    1  2.000E+02  1.600E+02  0.000E+00  -3.12500E+00  -3.12500E-04   0.00000E+00
  *Command   5 * plot hfram          v:   1.00       0.00       0.00    
-                                                         t=     0.002     0.005
+                                                         t=     0.012     0.004
  *Command   6 * plot CONTour        v:   2.00       0.00       0.00    
-                                                         t=     0.004     0.005
+                                                         t=     0.017     0.004
     Minimum is  -2.98E-01 Maximum is   0.00E+00
  *Command   7 * plot BOUN           v:   0.00       0.00       0.00    
-                                                         t=     0.004     0.005
+                                                         t=     0.019     0.004
  *Command   8 * plot LOAD           v:   0.00       0.00       0.00    
-                                                         t=     0.004     0.005
+                                                         t=     0.019     0.004
  *Command   9 * plot hfram          v:   2.00       0.00       0.00    
-                                                         t=     0.004     0.005
+                                                         t=     0.019     0.004
  *Command  10 * plot ESTRess        v:   1.00       0.00       0.00    
-                                                         t=     0.004     0.005
+                                                         t=     0.019     0.004
  Projected values are set to REAL
 
     Minimum is  -5.98E+00 Maximum is   3.13E+00
- *End of Solution Execution*                             t=     0.004     0.005
- *Command   1 * plot BOUN           v:   0.00       0.00       0.00    
-                                                         t=     0.010     0.021
- *Command   1 * plot LOAD           v:   0.00       0.00       0.00    
-                                                         t=     0.010     0.022
- *Command   1 * plot HFRA           v:   1.00       0.00       0.00    
-                                                         t=     0.010     0.022
- *Command   1 * plot CONT           v:   1.00       0.00       0.00    
-                                                         t=     0.011     0.022
-    Minimum is  -3.69E-02 Maximum is   1.25E-01
- *Command   1 * plot defo           v:   10.0       0.00       0.00    
-                                                         t=     0.016     0.034
-  -> Plots on deformed mesh with scale: 1.00000E+01
-                     Eigenvector scale: 0.00000E+00
- *Command   1 * plot defo           v:   10.0       0.00       0.00    
-                                                         t=     0.016     0.034
-  -> Plots on deformed mesh with scale: 1.00000E+01
-                     Eigenvector scale: 0.00000E+00
- *Command   1 * plot defo           v:   10.0       0.00       0.00    
-                                                         t=     0.016     0.034
-  -> Plots on deformed mesh with scale: 1.00000E+01
-                     Eigenvector scale: 0.00000E+00
- *Command   1 * plot mesh           v:   0.00       0.00       0.00    
-                                                         t=     0.016     0.034
- *Command   1 * plot wipe           v:   0.00       0.00       0.00    
-                                                         t=     0.016     0.035
- *Command   1 * plot hfra           v:   1.00       0.00       0.00    
-                                                         t=     0.016     0.035
- *Command   1 * plot defo           v:   10.0       0.00       0.00    
-                                                         t=     0.016     0.035
-  -> Plots on deformed mesh with scale: 1.00000E+01
-                     Eigenvector scale: 0.00000E+00
- *Command   1 * plot contour        v:   2.00       0.00       0.00    
-                                                         t=     0.016     0.036
-    Minimum is  -2.98E-01 Maximum is   0.00E+00
- *Command   1 * plot wipe           v:   0.00       0.00       0.00    
-                                                         t=     0.017     0.036
- *Command   1 * plot defo           v:   50.0       0.00       0.00    
-                                                         t=     0.017     0.036
-  -> Plots on deformed mesh with scale: 5.00000E+01
-                     Eigenvector scale: 0.00000E+00
- *Command   1 * plot cont           v:   2.00       0.00       0.00    
-                                                         t=     0.017     0.036
-    Minimum is  -2.98E-01 Maximum is   0.00E+00
- *Command   1 * plot bon            v:   0.00       0.00       0.00    
-                                                         t=     0.017     0.036
- *Command   1 * plot boun           v:   0.00       0.00       0.00    
-                                                         t=     0.018     0.037
- *Command   1 * plot load           v:   0.00       0.00       0.00    
-                                                         t=     0.018     0.037
- *Command   1 * plot estr           v:   1.00       0.00       0.00    
-                                                         t=     0.018     0.037
- Projected values are set to REAL
-
-    Minimum is  -5.98E+00 Maximum is   3.13E+00
- *End of Solution Execution*                             t=     0.030     0.062
-
- *End of <FEAP> solution,  File: Otruss_2d                                                                                                                       
-
+ *End of Solution Execution*                             t=     0.021     0.004

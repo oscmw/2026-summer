@@ -1,0 +1,32 @@
+
+PARAmeters
+ pi = acos(-1)     ! pi number
+ pr = 1.0d+3	   ! internal pressure (Pa)
+ be = 0  	   ! in-plane fiber angle (axial planes)
+ Em = 2.0d+4   	   ! Ground elastic modulus at zero strain (Pa)
+ nu = 4.900d-1     ! Ground Poisson's ratio
+ rh = 1.06d+3  	   ! Ground density
+ h1 = 3.5d+3   	   ! Fiber parameter
+ h2 = 1.25d-0  	   ! Fiber parameter
+ dt = 1.0d-1 	   ! mechanical time step increment
+ dd = 1.0d-3  	   ! chemical time step increment (N/A in this analysis)
+ ta = 1.0d-0       ! end time
+ la = 3       	   ! number of steps in augment loop (if applies)
+ ln = 120      	   ! number of steps in newton iteration loops (max)
+ ne = 1 	   ! probe element
+ mi = 2		   ! 0 : mixed off, 2 : mixed on
+ 
+
+MATErial       1
+  SOLId              0    1   1   2   3
+    FINIte VOLUme 2
+    MIXEd
+    ELAStic NEOHook Em nu
+    DENSity mass rh
+    MASS CONSistent
+     
+
+MATErial       2
+  SOLId              0    1   1   2   3
+    ELAStic HOLZapfel h1 h2 cos(be) sin(be) 0
+     

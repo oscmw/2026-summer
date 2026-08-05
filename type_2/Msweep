@@ -1,0 +1,54 @@
+
+PARAmeters
+ pi = acos(-1)     ! pi number
+ pr = 1.0e+4       ! internal pressure
+ ri = 0.010        ! inner radius
+ ro = 0.015        ! outer radius
+ ht = 0.005        ! ring thickness
+ nl = 6		   ! number of layers
+ lt = ht/nl        ! layer thickness
+ to = ri/100	   ! nodal gap tolerance
+ Em = 104993   	   ! Ground elastic modulus at zero strain (Pa)
+ nu = 4.999d-1     ! Ground Poisson's ratio
+ rh = 1.06d+3      ! density
+ dt = 1.0d-1 	   ! mechanical time step increment
+ ta = 1.0          ! rise time
+ ln = 50	   ! newton iteration limit
+ la = 3		   ! augment iteration count
+ 
+
+MATErial       1
+  SOLId              0    1   1   2   3
+    FINIte VOLUme 2
+    MIXEd
+    ELAStic NEOHook Em nu
+    DENSity mass rh
+    MASS CONSistent
+     
+
+MATErial       2
+  PRESsure           0    2   1   2   3
+    LOAD pr 1
+    PLOT
+     
+
+PARAmeters
+ pr = 1.0e+5       ! internal pressure
+ ri = 0.010        ! inner radius
+ ro = 0.015        ! outer radius
+ ht = 0.005        ! ring thickness
+ Em = 1.0d+6	   ! Ground elastic modulus at zero strain (Pa)
+ nu = 4.200d-1     ! Ground Poisson's ratio
+ rh = 1.06d+3      ! density
+ 
+
+MATErial       1
+  SOLId              0    1   1   2   3
+    ELAStic ISOTropic Em nu
+     
+
+MATErial       2
+  PRESs              0    2   1   2   3
+    LOAD pr 1
+    PLOT
+     
