@@ -3,33 +3,24 @@ FEAP *** Isweep
 
  
 Parameters
- pr = 1.0e+5       ! internal pressure
+ pr = 1.0e+10      ! internal pressure
  ri = 0.010        ! inner radius
  ro = 0.015        ! outer radius
  ht = 0.005        ! ring thickness
- Em = 104993   	   ! Ground elastic modulus at zero strain (Pa)
- nu = 4.999d-1     ! Ground Poisson's ratio
+ Em = 1.0d+6	   ! Ground elastic modulus at zero strain (Pa)
+ nu = 4.200d-1     ! Ground Poisson's ratio
  rh = 1.06d+3      ! density
  
-MATErial       1
-  SOLId elmt     0   0   0
-    ELAStic NEOHook Em nu
-    DENSity mass rh
- 
-MATErial       2
-  PRESs elmt     0   0   0
-    LOAD pr 1
-    PLOT
- 
 
+ 
 COORdinates ALL
-        1 0  1.000000E-02  5.000000E-03
-        2 0  1.083333E-02  5.000000E-03
-        3 0  1.166667E-02  5.000000E-03
-        4 0  1.250000E-02  5.000000E-03
-        5 0  1.333333E-02  5.000000E-03
-        6 0  1.416667E-02  5.000000E-03
-        7 0  1.500000E-02  5.000000E-03
+        1 0  1.000000E-02  8.0000E-04
+        2 0  1.083333E-02  8.0000E-04
+        3 0  1.166667E-02  8.0000E-04
+        4 0  1.250000E-02  8.0000E-04
+        5 0  1.333333E-02  8.0000E-04
+        6 0  1.416667E-02  8.0000E-04
+        7 0  1.500000E-02  8.0000E-04
         8 0  1.000000E-02  0.000000E+00
         9 0  1.083333E-02  0.000000E+00
        10 0  1.166667E-02  0.000000E+00

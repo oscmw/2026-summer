@@ -1,0 +1,12 @@
+
+MATErial       1
+  TRUSS              0    1   1   2
+    ELAStic ISOTropic 1000.0
+    CROSs SECTion 10.0
+     
+
+MATErial       2
+  TRUSS              0    2   1   2
+    ELAStic ISOTropic 1000.0
+    CROSs SECTion 5.0
+     

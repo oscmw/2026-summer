@@ -1,0 +1,610 @@
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)           
+
+     Solution date: Thu Jul 30 17:58:26 2026
+
+              Release 8.7.1b      
+              03 July 2026        
+
+     Input Data Filename: IVein                                                                                                                           
+
+     Number of Nodal Points  - - - - - - :       96
+     Number of Elements  - - - - - - - - :       24
+
+     Spatial Dimension of Mesh - - - - - :        3
+     Degrees-of-Freedom/Node (Maximum) - :        3
+     Equations/Element       (Maximum) - :        0
+     Number Element Nodes    (Maximum) - :        8
+
+     Number of Material Sets - - - - - - :        1
+     Number Parameters/Set   (Program) - :      350
+     Number Parameters/Set   (Users  ) - :      150
+
+     Number Added Element Equations  - - :        0
+
+  C o n s t a n t    V a l u e s
+
+     Constant pi =  3.14159265E+00
+     Constant pr =  1.00000000E+05
+     Constant be =  0.00000000E+00
+     Constant em =  1.00000000E+06
+     Constant nu =  4.20000000E-01
+     Constant rh =  1.06000000E+03
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   M a t e r i a l    P r o p e r t i e s
+
+     Material Set Number   1: Element Type: SOLId:                           
+     Degree of Freedom Assignments    Local    Global
+                                     Number    Number
+                                        1         1
+                                        2         2
+                                        3         3
+
+     T h r e e   D i m e n s i o n a l   S o l i d   E l e m e n t
+
+     M e c h a n i c a l   P r o p e r t i e s
+
+          3-Dimensional Analysis
+
+          Modulus E        1.00000E+06
+          Poisson ratio    0.42000
+
+          Density          0.00000E+00
+
+          1-Gravity Load   0.00000E+00
+          2-Gravity Load   0.00000E+00
+          3-Gravity Load   0.00000E+00
+
+     C o n s t i t u t i v e    S t a r t
+
+          Start state  : Elastic
+
+     E l e m e n t    M o d e l
+
+          Formulation  : Small Deformation.
+          Element type : Displacement
+          Plot Output  : On
+          Interpolation: Lagrangian Polynomials
+          History terms/pt  =     0
+
+     W a r n i n g s   &   E r r o r s
+          Material density is zero.
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+  N o d a l   B. C.
+
+      Node 1-b.c. 2-b.c. 3-b.c.
+         1      0      1      0
+         2      0      1      0
+         3      0      1      0
+         4      0      1      0
+        25      1      0      0
+        26      1      0      0
+        27      1      0      0
+        28      1      0      0
+        49      0      1      0
+        50      0      1      0
+        51      0      1      0
+        52      0      1      0
+        73      1      0      0
+        74      1      0      0
+        75      1      0      0
+        76      1      0      0
+
+     Start Load Set   1
+           Proportional Load =   1
+
+     End Load Set   1
+
+     E l e m e n t   S i z e   V a l u e s
+          h-minimum =  2.6104E-03
+          h-maximum =  7.7608E-03
+
+     Load Group   1: Proportional Load =     1
+
+       P o l a r    S u r f a c e
+
+     x_Coord.     y_Coord.     z_Coord.
+   0.0000E+00   0.0000E+00   0.0000E+00
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   C o o r d i n a t e    S u r f a c e   L o a d s
+
+      Polynomial type: Lagrange
+
+      Node    1 Coord    2 Coord    3 Coord   Pressure
+         1  1.000E-02 -1.800E+02  0.000E+00 -1.000E+05
+         2  1.000E-02 -1.800E+02  5.000E-03 -1.000E+05
+         3  1.000E-02 -9.000E+01  5.000E-03 -1.000E+05
+         4  1.000E-02 -9.000E+01  0.000E+00 -1.000E+05
+         5  1.000E-02 -1.800E+02  2.500E-03 -1.000E+05
+         6  1.000E-02 -1.350E+02  5.000E-03 -1.000E+05
+         7  1.000E-02 -9.000E+01  2.500E-03 -1.000E+05
+         8  1.000E-02 -1.350E+02  0.000E+00 -1.000E+05
+         9  1.000E-02 -1.350E+02  2.500E-03 -1.000E+05
+       N o d a l    F o r c e s
+
+   Local     Global
+    Node      Node    1 Force    2 Force    3 Force   Pressure
+       1         1 -3.235E-01 -4.263E-02  0.000E+00 -1.000E+05
+       2         2 -3.235E-01 -4.263E-02  0.000E+00 -1.000E+05
+       3         6 -3.235E-01 -4.263E-02  0.000E+00 -1.000E+05
+       4         5 -3.235E-01 -4.263E-02  0.000E+00 -1.000E+05
+       1         5 -3.015E-01 -1.249E-01  0.000E+00 -1.000E+05
+       2         6 -3.015E-01 -1.249E-01  0.000E+00 -1.000E+05
+       3        10 -3.015E-01 -1.249E-01  0.000E+00 -1.000E+05
+       4         9 -3.015E-01 -1.249E-01  0.000E+00 -1.000E+05
+       1         9 -2.589E-01 -1.986E-01  0.000E+00 -1.000E+05
+       2        10 -2.589E-01 -1.986E-01  0.000E+00 -1.000E+05
+       3        14 -2.589E-01 -1.986E-01  0.000E+00 -1.000E+05
+       4        13 -2.589E-01 -1.986E-01  0.000E+00 -1.000E+05
+       1        13 -1.986E-01 -2.589E-01  0.000E+00 -1.000E+05
+       2        14 -1.986E-01 -2.589E-01  0.000E+00 -1.000E+05
+       3        18 -1.986E-01 -2.589E-01  0.000E+00 -1.000E+05
+       4        17 -1.986E-01 -2.589E-01  0.000E+00 -1.000E+05
+       1        17 -1.249E-01 -3.015E-01  0.000E+00 -1.000E+05
+       2        18 -1.249E-01 -3.015E-01  0.000E+00 -1.000E+05
+       3        22 -1.249E-01 -3.015E-01  0.000E+00 -1.000E+05
+       4        21 -1.249E-01 -3.015E-01  0.000E+00 -1.000E+05
+       1        21 -4.263E-02 -3.235E-01  0.000E+00 -1.000E+05
+       2        22 -4.263E-02 -3.235E-01  0.000E+00 -1.000E+05
+       3        26 -4.263E-02 -3.235E-01  0.000E+00 -1.000E+05
+       4        25 -4.263E-02 -3.235E-01  0.000E+00 -1.000E+05
+
+     End Load Group   1
+
+     Load Group   1: Proportional Load =     1
+
+       P o l a r    S u r f a c e
+
+     x_Coord.     y_Coord.     z_Coord.
+   0.0000E+00   0.0000E+00   0.0000E+00
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   C o o r d i n a t e    S u r f a c e   L o a d s
+
+      Polynomial type: Lagrange
+
+      Node    1 Coord    2 Coord    3 Coord   Pressure
+         1  1.000E-02 -9.000E+01  0.000E+00 -1.000E+05
+         2  1.000E-02 -9.000E+01  5.000E-03 -1.000E+05
+         3  1.000E-02  0.000E+00  5.000E-03 -1.000E+05
+         4  1.000E-02  0.000E+00  0.000E+00 -1.000E+05
+         5  1.000E-02 -9.000E+01  2.500E-03 -1.000E+05
+         6  1.000E-02 -4.500E+01  5.000E-03 -1.000E+05
+         7  1.000E-02  0.000E+00  2.500E-03 -1.000E+05
+         8  1.000E-02 -4.500E+01  0.000E+00 -1.000E+05
+         9  1.000E-02 -4.500E+01  2.500E-03 -1.000E+05
+       N o d a l    F o r c e s
+
+   Local     Global
+    Node      Node    1 Force    2 Force    3 Force   Pressure
+       1        25  4.263E-02 -3.235E-01  0.000E+00 -1.000E+05
+       2        26  4.263E-02 -3.235E-01  0.000E+00 -1.000E+05
+       3        30  4.263E-02 -3.235E-01  0.000E+00 -1.000E+05
+       4        29  4.263E-02 -3.235E-01  0.000E+00 -1.000E+05
+       1        29  1.249E-01 -3.015E-01  0.000E+00 -1.000E+05
+       2        30  1.249E-01 -3.015E-01  0.000E+00 -1.000E+05
+       3        34  1.249E-01 -3.015E-01  0.000E+00 -1.000E+05
+       4        33  1.249E-01 -3.015E-01  0.000E+00 -1.000E+05
+       1        33  1.986E-01 -2.589E-01  0.000E+00 -1.000E+05
+       2        34  1.986E-01 -2.589E-01  0.000E+00 -1.000E+05
+       3        38  1.986E-01 -2.589E-01  0.000E+00 -1.000E+05
+       4        37  1.986E-01 -2.589E-01  0.000E+00 -1.000E+05
+       1        37  2.589E-01 -1.986E-01  0.000E+00 -1.000E+05
+       2        38  2.589E-01 -1.986E-01  0.000E+00 -1.000E+05
+       3        42  2.589E-01 -1.986E-01  0.000E+00 -1.000E+05
+       4        41  2.589E-01 -1.986E-01  0.000E+00 -1.000E+05
+       1        41  3.015E-01 -1.249E-01  0.000E+00 -1.000E+05
+       2        42  3.015E-01 -1.249E-01  0.000E+00 -1.000E+05
+       3        46  3.015E-01 -1.249E-01  0.000E+00 -1.000E+05
+       4        45  3.015E-01 -1.249E-01  0.000E+00 -1.000E+05
+       1        45  3.235E-01 -4.263E-02  0.000E+00 -1.000E+05
+       2        46  3.235E-01 -4.263E-02  0.000E+00 -1.000E+05
+       3        50  3.235E-01 -4.263E-02  0.000E+00 -1.000E+05
+       4        49  3.235E-01 -4.263E-02  0.000E+00 -1.000E+05
+
+     End Load Group   1
+
+     Load Group   1: Proportional Load =     1
+
+       P o l a r    S u r f a c e
+
+     x_Coord.     y_Coord.     z_Coord.
+   0.0000E+00   0.0000E+00   0.0000E+00
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   C o o r d i n a t e    S u r f a c e   L o a d s
+
+      Polynomial type: Lagrange
+
+      Node    1 Coord    2 Coord    3 Coord   Pressure
+         1  1.000E-02  0.000E+00  0.000E+00 -1.000E+05
+         2  1.000E-02  0.000E+00  5.000E-03 -1.000E+05
+         3  1.000E-02  9.000E+01  5.000E-03 -1.000E+05
+         4  1.000E-02  9.000E+01  0.000E+00 -1.000E+05
+         5  1.000E-02  0.000E+00  2.500E-03 -1.000E+05
+         6  1.000E-02  4.500E+01  5.000E-03 -1.000E+05
+         7  1.000E-02  9.000E+01  2.500E-03 -1.000E+05
+         8  1.000E-02  4.500E+01  0.000E+00 -1.000E+05
+         9  1.000E-02  4.500E+01  2.500E-03 -1.000E+05
+       N o d a l    F o r c e s
+
+   Local     Global
+    Node      Node    1 Force    2 Force    3 Force   Pressure
+       1        49  3.235E-01  4.263E-02  0.000E+00 -1.000E+05
+       2        50  3.235E-01  4.263E-02  0.000E+00 -1.000E+05
+       3        54  3.235E-01  4.263E-02  0.000E+00 -1.000E+05
+       4        53  3.235E-01  4.263E-02  0.000E+00 -1.000E+05
+       1        53  3.015E-01  1.249E-01  0.000E+00 -1.000E+05
+       2        54  3.015E-01  1.249E-01  0.000E+00 -1.000E+05
+       3        58  3.015E-01  1.249E-01  0.000E+00 -1.000E+05
+       4        57  3.015E-01  1.249E-01  0.000E+00 -1.000E+05
+       1        57  2.589E-01  1.986E-01  0.000E+00 -1.000E+05
+       2        58  2.589E-01  1.986E-01  0.000E+00 -1.000E+05
+       3        62  2.589E-01  1.986E-01  0.000E+00 -1.000E+05
+       4        61  2.589E-01  1.986E-01  0.000E+00 -1.000E+05
+       1        61  1.986E-01  2.589E-01  0.000E+00 -1.000E+05
+       2        62  1.986E-01  2.589E-01  0.000E+00 -1.000E+05
+       3        66  1.986E-01  2.589E-01  0.000E+00 -1.000E+05
+       4        65  1.986E-01  2.589E-01  0.000E+00 -1.000E+05
+       1        65  1.249E-01  3.015E-01  0.000E+00 -1.000E+05
+       2        66  1.249E-01  3.015E-01  0.000E+00 -1.000E+05
+       3        70  1.249E-01  3.015E-01  0.000E+00 -1.000E+05
+       4        69  1.249E-01  3.015E-01  0.000E+00 -1.000E+05
+       1        69  4.263E-02  3.235E-01  0.000E+00 -1.000E+05
+       2        70  4.263E-02  3.235E-01  0.000E+00 -1.000E+05
+       3        74  4.263E-02  3.235E-01  0.000E+00 -1.000E+05
+       4        73  4.263E-02  3.235E-01  0.000E+00 -1.000E+05
+
+     End Load Group   1
+
+     Load Group   1: Proportional Load =     1
+
+       P o l a r    S u r f a c e
+
+     x_Coord.     y_Coord.     z_Coord.
+   0.0000E+00   0.0000E+00   0.0000E+00
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   C o o r d i n a t e    S u r f a c e   L o a d s
+
+      Polynomial type: Lagrange
+
+      Node    1 Coord    2 Coord    3 Coord   Pressure
+         1  1.000E-02  9.000E+01  0.000E+00 -1.000E+05
+         2  1.000E-02  9.000E+01  5.000E-03 -1.000E+05
+         3  1.000E-02  1.800E+02  5.000E-03 -1.000E+05
+         4  1.000E-02  1.800E+02  0.000E+00 -1.000E+05
+         5  1.000E-02  9.000E+01  2.500E-03 -1.000E+05
+         6  1.000E-02  1.350E+02  5.000E-03 -1.000E+05
+         7  1.000E-02  1.800E+02  2.500E-03 -1.000E+05
+         8  1.000E-02  1.350E+02  0.000E+00 -1.000E+05
+         9  1.000E-02  1.350E+02  2.500E-03 -1.000E+05
+       N o d a l    F o r c e s
+
+   Local     Global
+    Node      Node    1 Force    2 Force    3 Force   Pressure
+       1        73 -4.263E-02  3.235E-01  0.000E+00 -1.000E+05
+       2        74 -4.263E-02  3.235E-01  0.000E+00 -1.000E+05
+       3        78 -4.263E-02  3.235E-01  0.000E+00 -1.000E+05
+       4        77 -4.263E-02  3.235E-01  0.000E+00 -1.000E+05
+       1        77 -1.249E-01  3.015E-01  0.000E+00 -1.000E+05
+       2        78 -1.249E-01  3.015E-01  0.000E+00 -1.000E+05
+       3        82 -1.249E-01  3.015E-01  0.000E+00 -1.000E+05
+       4        81 -1.249E-01  3.015E-01  0.000E+00 -1.000E+05
+       1        81 -1.986E-01  2.589E-01  0.000E+00 -1.000E+05
+       2        82 -1.986E-01  2.589E-01  0.000E+00 -1.000E+05
+       3        86 -1.986E-01  2.589E-01  0.000E+00 -1.000E+05
+       4        85 -1.986E-01  2.589E-01  0.000E+00 -1.000E+05
+       1        85 -2.589E-01  1.986E-01  0.000E+00 -1.000E+05
+       2        86 -2.589E-01  1.986E-01  0.000E+00 -1.000E+05
+       3        90 -2.589E-01  1.986E-01  0.000E+00 -1.000E+05
+       4        89 -2.589E-01  1.986E-01  0.000E+00 -1.000E+05
+       1        89 -3.015E-01  1.249E-01  0.000E+00 -1.000E+05
+       2        90 -3.015E-01  1.249E-01  0.000E+00 -1.000E+05
+       3        94 -3.015E-01  1.249E-01  0.000E+00 -1.000E+05
+       4        93 -3.015E-01  1.249E-01  0.000E+00 -1.000E+05
+       1        93 -3.235E-01  4.263E-02  0.000E+00 -1.000E+05
+       2        94 -3.235E-01  4.263E-02  0.000E+00 -1.000E+05
+       3         2 -3.235E-01  4.263E-02  0.000E+00 -1.000E+05
+       4         1 -3.235E-01  4.263E-02  0.000E+00 -1.000E+05
+
+     End Load Group   1
+
+    Material  Element Set  Element Type  NH1/2 History  NH3 History  NH4 History
+         1            1     Solid                 0            0            0
+
+     P a r t i t i o n   1
+
+     E q u a t i o n / P r o b l e m   S u m m a r y:
+
+       Mesh dimension  (ndm) =         3 :  Number nodes     =              96
+       Number dof/node (ndf) =         3 :  Number elements  =              24
+       Element eqs.   (nadd) =         0 :  Number materials =               1
+       Number rigid bodies   =         0 :  Number equations =             272
+                                         :  Number global eq =               0
+       Number joints         =         0 :  Number tang terms=            7384
+       Transient integrator  = Static    :  Average col. ht. =              28
+
+
+  ---------------------------- END OF MESH INPUTS ----------------------------
+
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+     Solution Commands       Variable 1  Variable 2  Variable 3
+       PLOT      HIDE        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      MESH        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      AXIS        0.0000E+00  0.0000E+00  0.0000E+00
+ *Command   1 * plot HIDE           v:   0.00       0.00       0.00    
+                                                         t=     0.059     0.011
+ *ERROR* PPLOTF: Must specify PERSpective view first
+
+ *Command   2 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.065     0.012
+ *Command   3 * plot AXIS           v:   0.00       0.00       0.00    
+                                                         t=     0.065     0.012
+ *End of Solution Execution*                             t=     0.065     0.012
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+     Solution Commands       Variable 1  Variable 2  Variable 3
+       PROP                  1.0000E+00  0.0000E+00  0.0000E+00
+ *Command   1 * prop                v:   1.00       0.00       0.00    
+                                                         t=     0.065     0.012
+  Proportional Load Table Number  1
+  Type 2: Piecewise Linear Function Variation
+  Linear Interpolation Table
+   No.    Time        Value
+    1   0.00000E+00   0.00000E+00
+    2   0.00000E+00   1.00000E+00
+ *End of Solution Execution*                             t=     0.066     0.012
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+     Solution Commands       Variable 1  Variable 2  Variable 3
+       LOOP      time        1.0000E+00  0.0000E+00  0.0000E+00
+       DT                    0.0000E+00  0.0000E+00  0.0000E+00
+       TIME                  0.0000E+00  0.0000E+00  0.0000E+00
+       LOOP      augment     0.0000E+00  0.0000E+00  0.0000E+00
+       LOOP      newton      0.0000E+00  0.0000E+00  0.0000E+00
+       TANG                  1.0000E+00  0.0000E+00  0.0000E+00
+       NEXT      newton      0.0000E+00  0.0000E+00  0.0000E+00
+       AUGMent               0.0000E+00  0.0000E+00  0.0000E+00
+       NEXT      augment     0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      WIPE        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      UNDE        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      MESH        0.0000E+00  0.0000E+00  0.0000E+00
+       PLOT      DEFO        1.0000E+00  1.0000E+00  0.0000E+00
+       PLOT      MESH        0.0000E+00  0.0000E+00  0.0000E+00
+       NEXT      time        0.0000E+00  0.0000E+00  0.0000E+00
+       STRE      ne          1.0000E+00  0.0000E+00  0.0000E+00
+       DISPlacem 1           0.0000E+00  0.0000E+00  0.0000E+00
+       DiSP      4           0.0000E+00  0.0000E+00  0.0000E+00
+       DISPlacem 49          0.0000E+00  0.0000E+00  0.0000E+00
+       DiSP      51          0.0000E+00  0.0000E+00  0.0000E+00
+ *Command   1 * loop time           v:   1.00       16.0       0.00    
+                                                         t=     0.067     0.012
+ *Command   2 * dt                  v:   0.00       0.00       0.00    
+                                                         t=     0.067     0.012
+   DT: equal linear increments = 0.000000E+00
+ *Command   3 * time                v:   0.00       0.00       0.00    
+                                                         t=     0.067     0.012
+
+   Computing solution at time   0.0000E+00 using dt =  0.0000E+00
+   Total proportional load is   1.0000E+00
+ *Command   4 * loop augment        v:   0.00       10.0       0.00    
+                                                         t=     0.067     0.012
+ *Command   5 * loop newton         v:   0.00       8.00       0.00    
+                                                         t=     0.067     0.012
+ *Command   6 * tang                v:   1.00       0.00       0.00    
+                                                         t=     0.067     0.012
+   Residual 1 norm =  4.4827927E+00 Rel =  1.0000000E+00 t=     0.068     0.012
+      Convergence: Equations  norm   = F
+      Convergence: Individual groups = F
+ *D4TRIU WARNING* Lost at least 7 digits in reducing diagonals of         1 equations.
+                 Step:      1 Iteration:     0
+ *D4TRIU WARNING* Sign of diagonal changed when reducing         1 equations.
+                 Step:      1 Iteration:     0
+ Condition check: D-max 0.4947E+04; D-min 0.2547E-10; Ratio 0.1943E+15
+ Maximum no. diagonal digits lost: 15 in reducing equation     272
+   End Triangular Decomposition                          t=     0.068     0.012
+   Number of operations =  232930 plus        0 Mega-ops
+  Time: CPU =         0.07 , System =         0.01
+--> SOLVE AT  1805.67 Mflops. Time=        0.00
+   Energy convergence check
+    Initial   =    8.937695141393159E-02 Current   =    8.937695141393159E-02
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+      Convergence: Energy |R*u| norm = F
+      Convergence: Individual groups = F
+ *Command   7 * next newton         v:   1.00       6.00       1.00    
+                                                         t=     0.068     0.013
+ *Command   8 * augm                v:   0.00       0.00       0.00    
+                                                         t=     0.068     0.013
+ *Command   9 * next augment        v:   1.00       5.00       1.00    
+                                                         t=     0.068     0.013
+ *Command  10 * plot WIPE           v:   0.00       0.00       0.00    
+                                                         t=     0.068     0.013
+ *Command  11 * plot UNDE           v:   0.00       0.00       0.00    
+                                                         t=     0.069     0.013
+ *Command  12 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.069     0.013
+ *Command  13 * plot DEFO           v:   1.00       1.00       0.00    
+                                                         t=     0.069     0.013
+  -> Plots on deformed mesh with scale: 1.00000E+00
+                     Eigenvector scale: 0.00000E+00
+ *Command  14 * plot MESH           v:   0.00       0.00       0.00    
+                                                         t=     0.069     0.013
+ *Command  15 * next time           v:   1.00       2.00       1.00    
+                                                         t=     0.069     0.013
+ *Command  16 * stre ne             v:   1.00       0.00       0.00    
+                                                         t=     0.069     0.013
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)            
+
+     Element Cartesian Stresses
+
+    Elmt  Matl  Quad     1-Coord     2-Coord     3-Coord
+           11-Stress   22-Stress   33-Stress   12-Stress   23-Stress   31-Stress
+           11-Strain   22-Strain   33-Strain   12-Strain   23-Strain   31-Strain
+            1-Stress    2-Stress    3-Stress    1-Strain    2-Strain    3-Strain
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       1     1     1 -1.0977E-02 -6.0470E-04  1.0566E-03
+         -3.0512E+03  2.4950E+05  9.6727E+03 -2.3751E+04  1.1092E+03  8.4091E+03
+         -1.1190E-01  2.4672E-01 -9.3837E-02 -6.7454E-02  3.1500E-03  2.3882E-02
+          2.5172E+05  1.3500E+04 -9.0936E+03  2.4987E-01 -8.8401E-02 -1.2048E-01
+
+       1     1     2 -1.0977E-02 -6.0470E-04  3.9434E-03
+         -3.0512E+03  2.4950E+05  9.6727E+03 -2.3751E+04 -1.1092E+03 -8.4091E+03
+         -1.1190E-01  2.4672E-01 -9.3837E-02 -6.7454E-02 -3.1500E-03 -2.3882E-02
+          2.5172E+05  1.3500E+04 -9.0936E+03  2.4987E-01 -8.8401E-02 -1.2048E-01
+
+       1     1     3 -1.3843E-02 -7.6258E-04  3.9434E-03
+         -5.4411E+04  1.4585E+05 -7.6674E+03 -1.8833E+04 -1.1063E+03 -8.4093E+03
+         -1.1245E-01  1.7192E-01 -4.6072E-02 -5.3487E-02 -3.1419E-03 -2.3882E-02
+          1.4761E+05 -6.2295E+03 -5.7605E+04  1.7442E-01 -4.4030E-02 -1.1698E-01
+
+       1     1     4 -1.3843E-02 -7.6258E-04  1.0566E-03
+         -5.4411E+04  1.4585E+05 -7.6674E+03 -1.8833E+04  1.1063E+03  8.4093E+03
+         -1.1245E-01  1.7192E-01 -4.6072E-02 -5.3487E-02  3.1419E-03  2.3882E-02
+          1.4761E+05 -6.2295E+03 -5.7605E+04  1.7442E-01 -4.4030E-02 -1.1698E-01
+
+       1     1     5 -1.0759E-02 -2.2568E-03  1.0566E-03
+          1.9890E+03  2.4446E+05  9.6760E+03 -4.2564E+04  1.1089E+03  8.4070E+03
+         -1.0475E-01  2.3956E-01 -9.3832E-02 -1.2088E-01  3.1492E-03  2.3876E-02
+          2.5171E+05  1.3502E+04 -9.0918E+03  2.4986E-01 -8.8399E-02 -1.2048E-01
+
+       1     1     6 -1.0759E-02 -2.2568E-03  3.9434E-03
+          1.9890E+03  2.4446E+05  9.6760E+03 -4.2564E+04 -1.1089E+03 -8.4070E+03
+         -1.0475E-01  2.3956E-01 -9.3832E-02 -1.2088E-01 -3.1492E-03 -2.3876E-02
+          2.5171E+05  1.3502E+04 -9.0918E+03  2.4986E-01 -8.8399E-02 -1.2048E-01
+
+       1     1     7 -1.3569E-02 -2.8460E-03  3.9434E-03
+         -5.0421E+04  1.4184E+05 -7.6769E+03 -3.3752E+04 -1.1061E+03 -8.4076E+03
+         -1.0677E-01  1.6625E-01 -4.6075E-02 -9.5855E-02 -3.1413E-03 -2.3878E-02
+          1.4760E+05 -6.2395E+03 -5.7612E+04  1.7442E-01 -4.4034E-02 -1.1698E-01
+
+       1     1     8 -1.3569E-02 -2.8460E-03  1.0566E-03
+         -5.0421E+04  1.4184E+05 -7.6769E+03 -3.3752E+04  1.1061E+03  8.4076E+03
+         -1.0677E-01  1.6625E-01 -4.6075E-02 -9.5855E-02  3.1413E-03  2.3878E-02
+          1.4760E+05 -6.2395E+03 -5.7612E+04  1.7442E-01 -4.4034E-02 -1.1698E-01
+
+       1     1   Avg -1.2451E-02 -1.6391E-03  2.5000E-03
+         -2.9469E+04  1.8946E+05 -3.5494E-01 -2.9329E+04  1.7452E-10 -2.8822E-11
+         -1.0904E-01  2.0184E-01 -6.7196E-02 -8.3294E-02  4.9539E-16 -8.0541E-17
+          1.9332E+05 -3.5494E-01 -3.3330E+04  2.2275E-01 -6.7196E-02 -1.2995E-01
+ *Command  17 * disp 1              v:   0.00       0.00       0.00    
+                                                         t=     0.070     0.013
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+  N o d a l   D i s p l a c e m e n t s     Time       0.00000E+00
+                                            Prop. Ld.  1.00000E+00
+                                            Type: Real     
+
+    Node     1 Coord     2 Coord     3 Coord     1 Displ     2 Displ     3 Displ
+       1 -1.0000E-02  0.0000E+00  0.0000E+00 -2.8777E-03  0.0000E+00 -8.9926E-04
+ *Command  18 * disp 4              v:   0.00       0.00       0.00    
+                                                         t=     0.070     0.013
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+  N o d a l   D i s p l a c e m e n t s     Time       0.00000E+00
+                                            Prop. Ld.  1.00000E+00
+                                            Type: Real     
+
+    Node     1 Coord     2 Coord     3 Coord     1 Displ     2 Displ     3 Displ
+       1 -1.0000E-02  0.0000E+00  0.0000E+00 -2.8777E-03  0.0000E+00 -8.9926E-04
+ *Command  19 * disp 49             v:   0.00       0.00       0.00    
+                                                         t=     0.070     0.013
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+  N o d a l   D i s p l a c e m e n t s     Time       0.00000E+00
+                                            Prop. Ld.  1.00000E+00
+                                            Type: Real     
+
+    Node     1 Coord     2 Coord     3 Coord     1 Displ     2 Displ     3 Displ
+       1 -1.0000E-02  0.0000E+00  0.0000E+00 -2.8777E-03  0.0000E+00 -8.9926E-04
+ *Command  20 * disp 51             v:   0.00       0.00       0.00    
+                                                         t=     0.070     0.013
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+  N o d a l   D i s p l a c e m e n t s     Time       0.00000E+00
+                                            Prop. Ld.  1.00000E+00
+                                            Type: Real     
+
+    Node     1 Coord     2 Coord     3 Coord     1 Displ     2 Displ     3 Displ
+       1 -1.0000E-02  0.0000E+00  0.0000E+00 -2.8777E-03  0.0000E+00 -8.9926E-04
+ *End of Solution Execution*                             t=     0.070     0.013
+ *Command   1 * stre node           v:   1.00       0.00       0.00    
+                                                         t=     0.072     0.014
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   N o d a l   P r o j e c t i o n s
+
+    Node    Material    1-Coord.    2-Coord.    3-Coord.
+          1-Pr.Value  2-Pr.Value  3-Pr.Value   Max Shear
+           I_1 Value Mises Value   J_3 Value
+             1 Value     2 Value     3 Value     4 Value     5 Value     6 Value
+             7 Value     8 Value     9 Value    10 Value    11 Value    12 Value
+    ----------------------------------------------------------------------------
+       1       1     -1.0000E-02  0.0000E+00  0.0000E+00
+          2.8943E+05  2.9499E+04  2.7952E+02  1.4457E+05
+          1.0640E+05  2.7570E+05  1.0357E+15
+          1.3762E+04  2.8943E+05  1.6017E+04  9.4587E-11  1.9713E-10  1.4566E+04
+         -1.1452E-01  2.7692E-01 -1.1132E-01  3.6082E-16  5.6075E-16  4.1368E-02
+ *Command   1 * cont 1              v:   0.00       0.00       0.00    
+                                                         t=     0.075     0.014
+ *Command   1 * plot cont           v:   1.00       0.00       0.00    
+                                                         t=     0.075     0.014
+    Minimum is  -2.88E-03 Maximum is   2.88E-03
+ *Command   1 * plot cont           v:   2.00       0.00       0.00    
+                                                         t=     0.077     0.017
+    Minimum is  -2.88E-03 Maximum is   2.88E-03
+ *Command   1 * cont node           v:   1.00       4.00       1.00    
+                                                         t=     0.080     0.020
+ *Command   1 * cont                v:   1.00       4.00       1.00    
+                                                         t=     0.081     0.020
+ *Command   1 * disp                v:   1.00       4.00       1.00    
+                                                         t=     0.081     0.021
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+  N o d a l   D i s p l a c e m e n t s     Time       0.00000E+00
+                                            Prop. Ld.  1.00000E+00
+                                            Type: Real     
+
+    Node     1 Coord     2 Coord     3 Coord     1 Displ     2 Displ     3 Displ
+       1 -1.0000E-02  0.0000E+00  0.0000E+00 -2.8777E-03  0.0000E+00 -8.9926E-04
+       2 -1.0000E-02  0.0000E+00  5.0000E-03 -2.8777E-03  0.0000E+00 -1.4559E-03
+       3 -1.5000E-02  0.0000E+00  5.0000E-03 -2.3051E-03  0.0000E+00 -1.2490E-03
+       4 -1.5000E-02  0.0000E+00  0.0000E+00 -2.3051E-03  0.0000E+00 -1.1061E-03
+ *Command   1 * stre node           v:   1.00       0.00       0.00    
+                                                         t=     0.082     0.024
+
+ FEAP *** ring mesh subj. internal pressure (testing fiber STRUcture)          
+
+   N o d a l   P r o j e c t i o n s
+
+    Node    Material    1-Coord.    2-Coord.    3-Coord.
+          1-Pr.Value  2-Pr.Value  3-Pr.Value   Max Shear
+           I_1 Value Mises Value   J_3 Value
+             1 Value     2 Value     3 Value     4 Value     5 Value     6 Value
+             7 Value     8 Value     9 Value    10 Value    11 Value    12 Value
+    ----------------------------------------------------------------------------
+       1       1     -1.0000E-02  0.0000E+00  0.0000E+00
+          2.8943E+05  2.9499E+04  2.7952E+02  1.4457E+05
+          1.0640E+05  2.7570E+05  1.0357E+15
+          1.3762E+04  2.8943E+05  1.6017E+04  9.4587E-11  1.9713E-10  1.4566E+04
+         -1.1452E-01  2.7692E-01 -1.1132E-01  3.6082E-16  5.6075E-16  4.1368E-02

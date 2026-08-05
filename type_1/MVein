@@ -1,0 +1,14 @@
+
+PARAmeters
+ pi = acos(-1)     ! pi number
+ pr = 10.0d+4	   ! internal pressure (Pa)
+ be = 0  	   ! in-plane fiber angle (axial planes)
+ Em = 1.0d+6	   ! Ground elastic modulus at zero strain (Pa)
+ nu = 4.200d-1     ! Ground Poisson's ratio
+ rh = 1.06d+3  	   ! Ground density
+ !h1 = 3.5d+3   	   ! Fiber parameter
+
+MATErial       1
+  SOLId              0    1   1   2   3
+    ELAStic ISOTropic Em nu
+     
