@@ -21,14 +21,14 @@ PARAmeter
 MATErial,1
  SOLID 
  FINIte VOLUme 2
- MIXEd
+ Mixed
  ELAStic NEOHook Em nu 	 ! E and nu
  DENSity mass rh                 ! rho
  MASS CONSistent
                                  ! Blank termination record
 MATErial,2
  PRESsure
- LOAD,,-pr,1	                 
+ LOAD,,pr,1	                 
  PLOT
  FOLLower
                                  ! Blank termination record
@@ -37,7 +37,7 @@ SWEEp
  CYLI 96 4
  CENT 0 0 0
  1   0.0  0.0
- 2 -360.0  0.0
+ 2 360.0  0.0
                                  ! Blank termination record
 CANGle
  POLAr,0,0,0
@@ -106,29 +106,27 @@ END
 BATCh
  TPLOT,,1
 END
- ELEM,1, 1 
- ELEM,1, 1 1.0000E-02 0 0
- ELEM,1, 9
- ELEM,2, 1
- ELEM,3, 1 1.1667E-02 0 0
- ELEM,3, 1 
- ELEM,4, 1 1.2500E-02 0 0
- ELEM,4, 1 
- ELEM,5, 1 1.3333E-02 0 0
- ELEM,5, 1
- ELEM,6, 1 1.4167E-02 0 0
- ELEM,6, 1
- ELEM,6, 1 1.5000E-02 0 0
- ELEM,6, 1
- DISP,8,1
- DISP,8,2
- DISP,8,3
- DISP,9,1
- DISP,10,1
- DISP,11,1
  DISP,12,1
  DISP,13,1
  DISP,14,1
+ DISP,15,1
+ DISP,16,1
+ DISP,17,1
+ DISP,18,1
+ DISP,19,1
+ DISP,20,1
+ DISP,21,1
+ DISP,22,1
+ ELEM,1,1
+ ELEM,2,1
+ ELEM,3,1
+ ELEM,4,1
+ ELEM,5,1
+ ELEM,6,1
+ ELEM,7,1
+ ELEM,8,1
+ ELEM,9,1
+ ELEM,10,1
  SHOW
 
  
