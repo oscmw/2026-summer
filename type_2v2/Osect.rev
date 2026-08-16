@@ -1,0 +1,95 @@
+ FEAP *** Isweep                                                                
+
+     Solution date: Fri Aug  7 14:06:56 2026
+
+              Release 8.7.1b      
+              03 July 2026        
+
+     Input Data Filename: Isect.rev                                                                                                                       
+
+     Number of Nodal Points  - - - - - - :       14
+     Number of Elements  - - - - - - - - :        7
+
+     Spatial Dimension of Mesh - - - - - :        2
+     Degrees-of-Freedom/Node (Maximum) - :        2
+     Equations/Element       (Maximum) - :        0
+     Number Element Nodes    (Maximum) - :        4
+
+     Number of Material Sets - - - - - - :        2
+     Number Parameters/Set   (Program) - :      350
+     Number Parameters/Set   (Users  ) - :      150
+
+     Number Added Element Equations  - - :        0
+
+  C o n s t a n t    V a l u e s
+
+     Constant pr =  1.00000000E+10
+     Constant ri =  1.00000000E-02
+     Constant ro =  1.50000000E-02
+     Constant ht =  5.00000000E-03
+     Constant em =  1.00000000E+06
+     Constant nu =  4.20000000E-01
+     Constant rh =  1.06000000E+03
+
+ FEAP *** Isweep                                                               
+
+     Nodal Coordinates
+
+      Node     1 Coord     2 Coord
+         1  1.0000E-02  8.0000E-04
+         2  1.0833E-02  8.0000E-04
+         3  1.1667E-02  8.0000E-04
+         4  1.2500E-02  8.0000E-04
+         5  1.3333E-02  8.0000E-04
+         6  1.4167E-02  8.0000E-04
+         7  1.5000E-02  8.0000E-04
+         8  1.0000E-02  0.0000E+00
+         9  1.0833E-02  0.0000E+00
+        10  1.1667E-02  0.0000E+00
+        11  1.2500E-02  0.0000E+00
+        12  1.3333E-02  0.0000E+00
+        13  1.4167E-02  0.0000E+00
+        14  1.5000E-02  0.0000E+00
+
+          Part(   1) = PART0001       
+
+ FEAP *** Isweep                                                               
+
+     E l e m e n t s
+
+    Elmt Mat Reg  Type  1 Node  2 Node  3 Node  4 Node
+       1   1   0 Unkn?       1       2       9       8
+       2   1   0 Unkn?       2       3      10       9
+       3   1   0 Unkn?       3       4      11      10
+       4   1   0 Unkn?       4       5      12      11
+       5   1   0 Unkn?       5       6      13      12
+       6   1   0 Unkn?       6       7      14      13
+       7   2   0 Unkn?       1       8       0       0
+
+          Part(   1): Elm start =       1
+                      Elm last  =       7
+                      Nodes/el. =       0
+
+ FEAP *** Isweep                                                               
+
+  N o d a l   B. C.
+
+      Node 1-b.c. 2-b.c.
+         8      0      1
+         9      0      1
+        10      0      1
+        11      0      1
+        12      0      1
+        13      0      1
+        14      0      1
+     *ERROR* MESHCK: Data for material set    1 on element          1 not input
+     *ERROR* MESHCK: Data for material set    1 on element          2 not input
+     *ERROR* MESHCK: Data for material set    1 on element          3 not input
+     *ERROR* MESHCK: Data for material set    1 on element          4 not input
+     *ERROR* MESHCK: Data for material set    1 on element          5 not input
+     *ERROR* MESHCK: Data for material set    1 on element          6 not input
+     *ERROR* MESHCK: Data for material set    2 on element          7 not input
+
+     E l e m e n t   S i z e   V a l u e s
+          h-minimum =  8.0000E-04
+          h-maximum =  1.1552E-03

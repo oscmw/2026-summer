@@ -1,5 +1,5 @@
 FEAP *** inflated fiber reinforced soft ring - circum. b.c. top surf. linked in z
- 0 0 0 3 3 8
+ 0 0 0 6 3 8
 
 PARAmeter
  pi = acos(-1)     ! pi number
@@ -17,6 +17,7 @@ PARAmeter
  ta = 1.0          ! rise time
  ln = 50	   ! newton iteration limit
  la = 3		   ! augment iteration count
+ rs = 0.0005	   ! radius of steel ring 
 
 MATErial,1
  SOLID 
@@ -28,12 +29,17 @@ MATErial,1
                                  ! Blank termination record
 MATErial,2
  PRESsure
- LOAD,,-pr,1	                 
+ LOAD,,pr,1	                 
  PLOT
  FOLLower
                                  ! Blank termination record
+MATErial,3
+  FRAME
+    ELAStic ISOTropic 210E09 0.3
+    CROSs SECTion     pi*rs^2 pi*rs^4/4 pi*rs^4/4 0
+                  ! Blank termination record
 SWEEp
- Isect.rev
+ IsectR.rev
  CYLI 96 4
  CENT 0 0 0
  1   0.0  0.0
@@ -106,23 +112,7 @@ END
 BATCh
  TPLOT,,1
 END
- ELEM,1, 1 
- ELEM,1, 1 1.0000E-02 0 0
- ELEM,1, 9
- ELEM,2, 1
- ELEM,3, 1 1.1667E-02 0 0
- ELEM,3, 1 
- ELEM,4, 1 1.2500E-02 0 0
- ELEM,4, 1 
- ELEM,5, 1 1.3333E-02 0 0
- ELEM,5, 1
- ELEM,6, 1 1.4167E-02 0 0
- ELEM,6, 1
- ELEM,6, 1 1.5000E-02 0 0
- ELEM,6, 1
  DISP,8,1
- DISP,8,2
- DISP,8,3
  DISP,9,1
  DISP,10,1
  DISP,11,1
