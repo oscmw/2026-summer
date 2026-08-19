@@ -1,19 +1,19 @@
 FEAP *** inflated fiber reinforced soft ring - circum. b.c. top surf. linked in z
- 0 0 0 6 3 8
+ 0 0 4 3 6 8
 
 PARAmeter
  pi = acos(-1)     ! pi number
- pr = 1.0e+5    ! internal pressure
+ pr = 1.0e+5       ! internal pressure
  ri = 0.010        ! inner radius
  ro = 0.015        ! outer radius
- ht = 0.005       ! ring thickness
+ ht = 0.005        ! ring thickness
  nl = 6		   ! number of layers
  lt = ht/nl        ! layer thickness
  to = ri/100	   ! nodal gap tolerance 
  Em = 1.0d+6	   ! Ground elastic modulus at zero strain (Pa)
  nu = 4.200d-1     ! Ground Poisson's ratio
  rh = 1.06d+3      ! density
- dt = 1.0d-1 	   ! mechanical time step increment
+ dt = 1.0d-2 	   ! mechanical time step increment
  ta = 1.0          ! rise time
  ln = 50	   ! newton iteration limit
  la = 3		   ! augment iteration count
@@ -34,17 +34,26 @@ MATErial,2
  FOLLower
                                  ! Blank termination record
 MATErial,3
-  FRAME
+   SHELL
     ELAStic ISOTropic 210E09 0.3
-    CROSs SECTion     pi*rs^2 pi*rs^4/4 pi*rs^4/4 0
-                  ! Blank termination record
+    THICk,,rs
+                  ! Blank terminati
 SWEEp
- IsectR.rev
- CYLI 96 4
+ IsectS.rev
+ CYLI 40 4
  CENT 0 0 0
- 1   0.0  0.0
+ 1 0.0  0.0
  2 -360.0  0.0
                                  ! Blank termination record
+BLOCk
+CYLI,24,1
+QUAD 4
+MATE 3
+1   ri-rs/2     0.0     0.002
+2   ri-rs/2  -360.0     0.002
+3   ri-rs/2  -360.0     0.003
+4   ri-rs/2     0.0     0.003
+ 
 CANGle
  POLAr,0,0,0
   SURFace
@@ -67,6 +76,26 @@ CANGle
    2     ri    90    ht   90
    3     ri   180    ht  180
    4     ri   180  .000  180
+  SURFace
+   1   ri-rs/2  -180  0.002  -180
+   2   ri-rs/2  -180  0.003  -180
+   3   ri-rs/2   -90  0.003   -90
+   4   ri-rs/2   -90  0.002   -90
+  SURFace
+   1   ri-rs/2   -90  0.002   -90
+   2   ri-rs/2   -90  0.003   -90
+   3   ri-rs/2     0  0.003     0
+   4   ri-rs/2     0  0.002     0
+  SURFace
+   1   ri-rs/2     0  0.002     0
+   2   ri-rs/2     0  0.003     0
+   3   ri-rs/2    90  0.003    90
+   4   ri-rs/2    90  0.002    90
+  SURFace
+   1   ri-rs/2    90  0.002    90
+   2   ri-rs/2    90  0.003    90
+   3   ri-rs/2   180  0.003   180
+   4   ri-rs/2   180  0.002   180
                                  ! Blank termination record
 EBOUndary
    3    0.0  0 0 1
@@ -74,7 +103,7 @@ EBOUndary
 CBOUndary
  POLAr
  SURFace,0,1,0
-   1     ri-to   -180    0.
+   1     ri-to-   -180    0.
    2     ri-to    -90    0.
    3     ri+to    -90    0.
    4     ri+to   -180    0.
@@ -93,6 +122,26 @@ CBOUndary
    2     ri-to    180    0.
    3     ri+to    180    0.
    4     ri+to     90    0.
+ SURFace,0,1,1
+   1   ri-rs/2-to  -180   0.002
+   2   ri-rs/2-to   -90   0.002
+   3   ri-rs/2+to   -90   0.002
+   4   ri-rs/2+to  -180   0.002
+ SURFace,0,1,0
+   1   ri-rs/2-to   -90   0.002
+   2   ri-rs/2-to     0   0.002
+   3   ri-rs/2+to     0   0.002
+   4   ri-rs/2+to   -90   0.002
+ SURFace,0,1,0
+   1   ri-rs/2-to     0   0.002
+   2   ri-rs/2-to    90   0.002
+   3   ri-rs/2+to    90   0.002
+   4   ri-rs/2+to     0   0.002
+ SURFace,0,1,0
+   1   ri-rs/2-to    90   0.002
+   2   ri-rs/2-to   180   0.002
+   3   ri-rs/2+to   180   0.002
+   4   ri-rs/2+to    90   0.002
                                  ! Blank termination record
 END MESH
 
@@ -100,6 +149,119 @@ TIE
 
 SLINk
  3 ht ht 1 1 0
+ 
+CONTact
+! OUTER SURFACE
+SURFace 1
+  QUAD 4
+  BLOCk POLAr
+  BLOCk MATE 1
+  BLOCk SEGMent
+    1   ri  -180  -0.001  -180
+    2   ri  -180    ht+0.001  -180
+    3   ri   -90    ht+0.001   -90
+    4   ri   -90  -0.001   -90
+
+SURFace 2
+  QUAD 4
+  BLOCk POLAr
+  BLOCk MATE 1
+  BLOCk SEGMent
+    1   ri   -90  .000   -90
+    2   ri   -90    ht   -90
+    3   ri     0    ht     0
+    4   ri     0  .000     0
+
+SURFace 3
+  QUAD 4
+  BLOCk POLAr
+  BLOCk MATE 1
+  BLOCk SEGMent
+    1   ri     0  .000     0
+    2   ri     0    ht     0
+    3   ri    90    ht    90
+    4   ri    90  .000    90
+
+SURFace 4
+  QUAD 4
+  BLOCk POLAr
+  BLOCk MATE 1
+  BLOCk SEGMent
+    1   ri    90  .000    90
+    2   ri    90    ht    90
+    3   ri   180    ht   180
+    4   ri   180  .000   180
+
+!SHELL SURFACES -- MASTER SURFACES
+SURFace 5
+  QUAD 4
+  BLOCk POLAr
+  BLOCk MATE 3
+  BLOCk SEGMent
+    1   ri-rs/2  -180  0.002  -180
+    2   ri-rs/2  -180  0.003  -180
+    3   ri-rs/2   -90  0.003   -90
+    4   ri-rs/2   -90  0.002   -90
+
+SURFace 6
+  QUAD 4
+  BLOCk POLAr
+  BLOCk MATE 3
+  BLOCk SEGMent
+    1   ri-rs/2   -90  0.002   -90
+    2   ri-rs/2   -90  0.003   -90
+    3   ri-rs/2     0  0.003     0
+    4   ri-rs/2     0  0.002     0
+
+SURFace 7
+  QUAD 4
+  BLOCk POLAr
+  BLOCk MATE 3
+  BLOCk SEGMent
+    1   ri-rs/2     0  0.002     0
+    2   ri-rs/2     0  0.003     0
+    3   ri-rs/2    90  0.003    90
+    4   ri-rs/2    90  0.002    90
+
+SURFace 8
+  QUAD 4
+  BLOCk POLAr
+  BLOCk MATE 3
+  BLOCk SEGMent
+    1   ri-rs/2    90  0.002    90
+    2   ri-rs/2    90  0.003    90
+    3   ri-rs/2   180  0.003   180
+    4   ri-rs/2   180  0.002   180
+    
+PAIR 1
+  NTOS 1 5
+  SOLM PENAlty 1.0e7 1.0e6
+  AUGMent
+  THICkness CONStant rs/2-1.0E-05
+  TOLE,,1.0d-6 1.0d-6 1.0d-5
+
+PAIR 2
+  NTOS 2 6
+  SOLM PENAlty 1.0e7 1.0e6
+  AUGMent
+  THICkness CONStant rs/2-1.0E-05
+  TOLE,,1.0d-6 1.0d-6 1.0d-5
+
+PAIR 3
+  NTOS 3 7
+  SOLM PENAlty 1.0e7 1.0e6
+  AUGMent
+  THICkness CONStant rs/2-1.0E-05
+  TOLE,,1.0d-6 1.0d-6 1.0d-5
+
+PAIR 4
+  NTOS 4 8
+  SOLM PENAlty 1.0e7 1.0d6
+  AUGMent
+  THICkness CONStant rs/2-1.0E-05
+  TOLE,,1.0d-6 1.0d-6 1.0d-5
+
+END
 
 
 BATCh
@@ -107,27 +269,13 @@ PROP,,1
 END
 2 2
 0,0,ta,1.
-
-
-BATCh
- TPLOT,,1
-END
- DISP,8,1
- DISP,9,1
- DISP,10,1
- DISP,11,1
- DISP,12,1
- DISP,13,1
- DISP,14,1
- SHOW
-
  
 BATCh
  PLOT,PERS,1
 END
 0
-0, 0,.6
-1, 0, 0
+0,0,0.6
+0, 1, 0
 
 BATCh
  PLOT,HIDE
@@ -137,11 +285,11 @@ BATCh
  PLOT,DEFO
 END
 
-!INTE
+INTE
 
 BATCh
  cyli,0,0,0
- LOOP time 10
+ LOOP time 100
   DT,,dt
   TIME
    LOOP,augment,la
@@ -156,10 +304,11 @@ BATCh
  PLOT,DEFO,1,1
 !  PLOT JPEG
 !  PVIEw TIME
- STRE,ne,1
+! STRE,ne,1
  NEXT time
- STREss,NODE,8,14,1
 END
 
 INTEractive
 STOP
+
+

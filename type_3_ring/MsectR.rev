@@ -1,0 +1,29 @@
+
+PARAmeters
+ pr = 1.0e+10      ! internal pressure
+ ri = 0.010        ! inner radius
+ ro = 0.015        ! outer radius
+ ht = 0.005        ! ring thickness
+ Em = 1.0d+6	   ! Ground elastic modulus at zero strain (Pa)
+ nu = 4.200d-1     ! Ground Poisson's ratio
+ rh = 1.06d+3      ! density
+ 
+
+MATErial       1
+  SOLID              0    1   1   2
+    FINIte VOLUme 2
+    MIXEd
+    ELAStic NEOHook Em nu
+    DENSity mass rh
+    MASS CONSistent
+     
+
+MATErial       2
+  PRESsure           0    2   1   2
+    LOAD,,pr,1
+    PLOT
+    FOLLower
+     
+
+MATErial       3
+  THRUST             0    3   1   2
