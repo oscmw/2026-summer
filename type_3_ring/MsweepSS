@@ -1,0 +1,40 @@
+
+PARAmeters
+ pi = acos(-1)     ! pi number
+ pr = 1.0e+5       ! internal pressure
+ ri = 0.010        ! inner radius
+ ro = 0.015        ! outer radius
+ ht = 0.005        ! ring thickness
+ nl = 6		   ! number of layers:
+ lt = ht/nl        ! layer thickness
+ to = ri/100	   ! nodal gap tolerance
+ Em = 1.0d+6	   ! Ground elastic modulus at zero strain (Pa)
+ nu = 4.200d-1     ! Ground Poisson's ratio:
+ rh = 1.06d+3      ! density
+ dt = 1.0d-2 	   ! mechanical time step increment
+ ta = 1.0          ! rise time
+ ln = 50	   ! newton iteration limit
+ la = 3		   ! augment iteration count
+ rs = 0.001	   ! radius of steel ring
+ 
+
+MATErial       1
+  SOLID              0    1   1   2   3   4   5   6
+    FINIte VOLUme 2
+    MIXEd
+    ELAStic NEOHook Em nu
+    DENSity mass rh
+    MASS CONSistent
+     
+
+MATErial       2
+  PRESsure           0    2   1   2   3   4   5   6
+    LOAD,,pr,1
+    PLOT
+    FOLLower
+     
+
+MATErial       3
+  SOLID              0    3   1   2   3   4   5   6
+    ELAStic ISOTropic 210E09 0.3
+     

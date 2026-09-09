@@ -1,0 +1,68 @@
+
+  --------------------------------- START OF FEAP LOG ----------------------------------
+
+  INPUT FILE NAME: IsweepS3                                                                                                                        
+
+  MESH INPUT RECORDS
+  ------------------
+     PARAmeter                      
+     MATErial        1              
+     MATErial        2              
+     MATErial        3              
+     SWEEp                          
+     BLOCk                          
+     CANGle                         
+     CBOUndary                      
+     END             MESH           
+
+  CONTACT INPUT DATA
+  ------------------
+     SURF 5       
+     SURF 6       
+     SURF 7       
+     SURF 8       
+     SURF 1       
+     SURF 2       
+     SURF 3       
+     SURF 4       
+     PAIR 1       
+     PAIR 2       
+     PAIR 3       
+     PAIR 4       
+
+  --------------------------------- END OF CONTACT INPUTS ------------------------------
+
+
+  --------------------------------- END OF MESH INPUTS ---------------------------------
+
+  CONVERGENCE LABELS
+  ----------------
+    UN = Unconverged
+    LI = Linear Problem: No Test
+    ER = Energy & Residual Converged
+    EN = Energy Converged
+    RN = Residual Converged
+    ET = Energy Converged to Zero Tolerance
+    RT = Residual Converged to Tolerance
+    RE = Residual Equations Converged to Tolerance
+    EE = Energy Equation Converged to Tolerance
+    EQ = Energy & Residual Equations Converged to Tolerance
+
+  SOLUTION SUMMARY
+  ----------------
+    Load  Total     Solution      Time     Residual Norm        Energy Norm     CPU Time Cn
+    Step Tang+Form      Time      Incr.  Initial     Final   Initial     Final (Seconds)
+  -----------------------------------------------------------------------------------------
+       1    4   0  1.000E-02  1.00E-02  5.82E-02  5.52E-13  1.51E-05  3.49E-23      0.42 ER
+       2    5   0  2.000E-02  1.00E-02  5.82E-02  1.72E-14  1.50E-05  7.07E-22      0.74 ER
+       3    4   0  3.000E-02  1.00E-02  5.82E-02  3.32E-11  1.48E-05  1.76E-22      1.01 ER
+       4    4   0  4.000E-02  1.00E-02  5.81E-02  3.39E-12  1.47E-05  1.03E-23      1.25 ER
+       5    4   0  5.000E-02  1.00E-02  5.81E-02  1.51E-13  1.45E-05  2.85E-22      1.50 ER
+       6    4   0  6.000E-02  1.00E-02  5.80E-02  4.07E-13  1.44E-05  9.21E-23      1.78 ER
+       7    4   0  7.000E-02  1.00E-02  5.80E-02  1.37E-12  1.42E-05  8.65E-22      2.01 ER
+       8    4   0  8.000E-02  1.00E-02  5.80E-02  2.16E-13  1.41E-05  4.27E-21      2.24 RN
+       9    4   0  9.000E-02  1.00E-02  5.79E-02  2.96E-12  1.40E-05  6.30E-23      2.47 ER
+      10    4   0  1.000E-01  1.00E-02  5.79E-02  3.10E-13  1.38E-05  2.12E-21      2.71 RN
+      11    4   0  1.100E-01  1.00E-02  5.79E-02  1.58E-12  1.37E-05  6.30E-21      2.93 RN
+      12    4   0  1.200E-01  1.00E-02  5.78E-02  3.27E-12  1.36E-05  3.85E-20      3.16 RN
+      13    4   0  1.300E-01  1.00E-02  5.78E-02  7.00E-12  1.35E-05  2.72E-21      3.42 RN
