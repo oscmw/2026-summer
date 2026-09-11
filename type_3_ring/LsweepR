@@ -1,0 +1,51 @@
+
+  --------------------------------- START OF FEAP LOG ----------------------------------
+
+  INPUT FILE NAME: IsweepR                                                                                                                         
+
+  MESH INPUT RECORDS
+  ------------------
+     PARAmeter                      
+     MATErial        1              
+     MATErial        2              
+     MATErial        3              
+     SWEEp                          
+     BLOCk                          
+     CANGle                         
+     EBOUndary                      
+     CBOUndary                      
+     END             MESH           
+
+  --------------------------------- END OF MESH INPUTS ---------------------------------
+
+  CONVERGENCE LABELS
+  ----------------
+    UN = Unconverged
+    LI = Linear Problem: No Test
+    ER = Energy & Residual Converged
+    EN = Energy Converged
+    RN = Residual Converged
+    ET = Energy Converged to Zero Tolerance
+    RT = Residual Converged to Tolerance
+    RE = Residual Equations Converged to Tolerance
+    EE = Energy Equation Converged to Tolerance
+    EQ = Energy & Residual Equations Converged to Tolerance
+
+  SOLUTION SUMMARY
+  ----------------
+    Load  Total     Solution      Time     Residual Norm        Energy Norm     CPU Time Cn
+    Step Tang+Form      Time      Incr.  Initial     Final   Initial     Final (Seconds)
+  -----------------------------------------------------------------------------------------
+       1    5   0  1.000E-01  1.00E-01  1.34E-01  1.69E-15  3.04E-04  4.28E-34      0.25 ER
+       2    5   0  2.000E-01  1.00E-01  1.34E-01  2.63E-15  2.85E-04  1.14E-33      0.33 ER
+       3    5   0  3.000E-01  1.00E-01  1.33E-01  3.84E-15  2.67E-04  2.32E-33      0.41 ER
+       4    5   0  4.000E-01  1.00E-01  1.32E-01  5.70E-15  2.50E-04  5.48E-33      0.48 ER
+       5    5   0  5.000E-01  1.00E-01  1.31E-01  5.91E-15  2.35E-04  6.74E-33      0.56 ER
+       6    5   0  6.000E-01  1.00E-01  1.31E-01  6.68E-15  2.21E-04  8.90E-33      0.67 ER
+       7    5   0  7.000E-01  1.00E-01  1.30E-01  7.27E-15  2.08E-04  1.07E-32      0.76 ER
+       8    5   0  8.000E-01  1.00E-01  1.29E-01  1.01E-14  1.97E-04  1.74E-32      0.87 ER
+       9    5   0  9.000E-01  1.00E-01  1.28E-01  9.73E-15  1.86E-04  1.75E-32      0.96 ER
+      10    5   0  1.000E+00  1.00E-01  1.28E-01  1.05E-14  1.76E-04  2.33E-32      1.08 ER
+
+  Sum      50   0
+  ---------------------------------- END OF FEAP LOG --------------------------------------

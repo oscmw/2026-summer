@@ -1,0 +1,118 @@
+ FEAP *** Isweep                                                                
+
+     Solution date: Tue Aug 11 14:44:05 2026
+
+              Release 8.7.1b      
+              03 July 2026        
+
+     Input Data Filename: IsectR.rev                                                                                                                      
+
+     Number of Nodal Points  - - - - - - :       15
+     Number of Elements  - - - - - - - - :        8
+
+     Spatial Dimension of Mesh - - - - - :        2
+     Degrees-of-Freedom/Node (Maximum) - :        2
+     Equations/Element       (Maximum) - :        0
+     Number Element Nodes    (Maximum) - :        4
+
+     Number of Material Sets - - - - - - :        3
+     Number Parameters/Set   (Program) - :      350
+     Number Parameters/Set   (Users  ) - :      150
+
+     Number Added Element Equations  - - :        0
+
+  C o n s t a n t    V a l u e s
+
+     Constant pr =  1.00000000E+10
+     Constant ri =  1.00000000E-02
+     Constant ro =  1.50000000E-02
+     Constant ht =  5.00000000E-03
+     Constant em =  1.00000000E+06
+     Constant nu =  4.20000000E-01
+     Constant rh =  1.06000000E+03
+
+ FEAP *** Isweep                                                               
+
+   M a t e r i a l    P r o p e r t i e s
+
+     Material Set Number   1: Element Type: SOLID:                           
+     Degree of Freedom Assignments    Local    Global
+                                     Number    Number
+                                        1         1
+                                        2         2
+
+     T w o   D i m e n s i o n a l   S o l i d   E l e m e n t
+
+     M e c h a n i c a l   P r o p e r t i e s
+
+     NeoHookean Stored Energy Function 
+
+          Plane Strain  Analysis
+
+          Modulus E        1.00000E+06
+          Poisson ratio    0.42000
+          Bulk Modulus     2.08333E+06
+          Shear Modulus    3.52113E+05
+
+          Volume Model     2
+               1: U(J) = 0.25*(J**2 - 1 - 2 * ln J)
+               2: U(J) = 0.50*(J - 1)**2
+               3: U(J) = 0.50*(ln J)**2
+               4: U(J) = 2.00*(J - 1 - ln J)
+               5: None: Incompressible
+
+          Thickness        1.00000E+00
+          Density          1.06000E+03
+
+          1-Gravity Load   0.00000E+00
+          2-Gravity Load   0.00000E+00
+          3-Gravity Load   0.00000E+00
+          Wave speed - c_o 4.90746E+01
+          Implicit time integration: theta =:, 0.00000
+
+     C o n s t i t u t i v e    S t a r t
+
+          Start state  : Elastic
+
+     E l e m e n t    M o d e l
+
+          Formulation  : Finite Deformation Mixed       
+          Element type : Mixed
+          Plot Output  : On
+          Augmenting   : Off
+          Interpolation: Lagrangian Polynomials
+          Mass type    : Consistent.
+          History terms/pt  =     0
+
+ FEAP *** Isweep                                                               
+
+   M a t e r i a l    P r o p e r t i e s
+
+     Material Set Number   2: Element Type: PRESs:                           
+     Degree of Freedom Assignments    Local    Global
+                                     Number    Number
+                                        1         1
+                                        2         2
+
+     P r e s s u r e   L o a d i n g
+
+          Loading Intensity      1.0000E+10
+          Proportional Load No.           1
+          Gradient Intensity     0.0000E+00
+          Proportional Load No.           0
+          Follower Loading
+          Plane analysis
+          Gauss quadrature
+          Surface plot on 
+
+ FEAP *** Isweep                                                               
+
+   M a t e r i a l    P r o p e r t i e s
+
+     Material Set Number   3: Element Type: THRUS:                           
+     Degree of Freedom Assignments    Local    Global
+                                     Number    Number
+                                        1         1
+                                        2         2
+  *ERROR* ELMLIB: Element:     0, type number  0 input, isw =  1
+ RANK =   0
