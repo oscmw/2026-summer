@@ -17,7 +17,7 @@ PARAmeter
  ta = 1.0          ! rise time
  ln = 50	   ! newton iteration limit
  la = 3		   ! augment iteration count
- rs = 0.001	   ! radius of steel ring 
+ hs = 0.0002	   ! thickness of steel ring 
 
 MATErial,1
  SOLID 
@@ -36,7 +36,7 @@ MATErial,2
 MATErial,3
    SHELL
     ELAStic ISOTropic 210E09 0.3
-    THICk,,rs/5
+    THICk,,hs
                   ! Blank terminati
 
 ! Solid
@@ -52,10 +52,10 @@ BLOCk
 CYLI,60,1
 QUAD 4
 MATE 3
-1   ri-rs/2     0.0     0.002
-2   ri-rs/2  -360.0     0.002
-3   ri-rs/2  -360.0     0.003
-4   ri-rs/2     0.0     0.003
+1   ri-hs/2     0.0     0.002
+2   ri-hs/2   360.0     0.002
+3   ri-hs/2   360.0     0.003
+4   ri-hs/2     0.0     0.003
  
 CANGle
  POLAr,0,0,0
@@ -80,25 +80,25 @@ CANGle
    3     ri   180    ht  180
    4     ri   180  .000  180
   SURFace
-   1   ri-rs/2  -180  0.002  -180
-   2   ri-rs/2  -180  0.003  -180
-   3   ri-rs/2   -90  0.003   -90
-   4   ri-rs/2   -90  0.002   -90
+   1   ri-hs/2  -180  0.002  -180
+   2   ri-hs/2  -180  0.003  -180
+   3   ri-hs/2   -90  0.003   -90
+   4   ri-hs/2   -90  0.002   -90
   SURFace
-   1   ri-rs/2   -90  0.002   -90
-   2   ri-rs/2   -90  0.003   -90
-   3   ri-rs/2     0  0.003     0
-   4   ri-rs/2     0  0.002     0
+   1   ri-hs/2   -90  0.002   -90
+   2   ri-hs/2   -90  0.003   -90
+   3   ri-hs/2     0  0.003     0
+   4   ri-hs/2     0  0.002     0
   SURFace
-   1   ri-rs/2     0  0.002     0
-   2   ri-rs/2     0  0.003     0
-   3   ri-rs/2    90  0.003    90
-   4   ri-rs/2    90  0.002    90
+   1   ri-hs/2     0  0.002     0
+   2   ri-hs/2     0  0.003     0
+   3   ri-hs/2    90  0.003    90
+   4   ri-hs/2    90  0.002    90
   SURFace
-   1   ri-rs/2    90  0.002    90
-   2   ri-rs/2    90  0.003    90
-   3   ri-rs/2   180  0.003   180
-   4   ri-rs/2   180  0.002   180
+   1   ri-hs/2    90  0.002    90
+   2   ri-hs/2    90  0.003    90
+   3   ri-hs/2   180  0.003   180
+   4   ri-hs/2   180  0.002   180
                                  ! Blank termination record
 SBOUndary SET
    1    0.0  0 0 1
@@ -127,25 +127,25 @@ CBOUndary
    3     ri+to    180    0.
    4     ri+to     90    0.
  SURFace,0,1,1
-   1   ri-rs/2-to  -180   0.002
-   2   ri-rs/2-to   -90   0.002
-   3   ri-rs/2+to   -90   0.002
-   4   ri-rs/2+to  -180   0.002
+   1   ri-hs/2-to  -180   0.002
+   2   ri-hs/2-to   -90   0.002
+   3   ri-hs/2+to   -90   0.002
+   4   ri-hs/2+to  -180   0.002
  SURFace,0,1,0
-   1   ri-rs/2-to   -90   0.002
-   2   ri-rs/2-to     0   0.002
-   3   ri-rs/2+to     0   0.002
-   4   ri-rs/2+to   -90   0.002
+   1   ri-hs/2-to   -90   0.002
+   2   ri-hs/2-to     0   0.002
+   3   ri-hs/2+to     0   0.002
+   4   ri-hs/2+to   -90   0.002
  SURFace,0,1,0
-   1   ri-rs/2-to     0   0.002
-   2   ri-rs/2-to    90   0.002
-   3   ri-rs/2+to    90   0.002
-   4   ri-rs/2+to     0   0.002
+   1   ri-hs/2-to     0   0.002
+   2   ri-hs/2-to    90   0.002
+   3   ri-hs/2+to    90   0.002
+   4   ri-hs/2+to     0   0.002
  SURFace,0,1,0
-   1   ri-rs/2-to    90   0.002
-   2   ri-rs/2-to   180   0.002
-   3   ri-rs/2+to   180   0.002
-   4   ri-rs/2+to    90   0.002
+   1   ri-hs/2-to    90   0.002
+   2   ri-hs/2-to   180   0.002
+   3   ri-hs/2+to   180   0.002
+   4   ri-hs/2+to    90   0.002
                                  ! Blank termination record
 END MESH
 
@@ -202,40 +202,40 @@ SURFace 1
   BLOCk POLAr
   BLOCk MATE 3
   BLOCk SEGMent
-    1   ri-rs/2  -180  0.002 !-180
-    2   ri-rs/2  -180  0.003 !-180
-    3   ri-rs/2   -90  0.003 ! -90
-    4   ri-rs/2   -90  0.002 ! -90
+    1   ri-hs/2  -180  0.002 !-180
+    2   ri-hs/2   -90  0.002 ! -90
+    3   ri-hs/2   -90  0.003 ! -90
+    4   ri-hs/2  -180  0.003 !-180
 
 SURFace 2
   QUAD 4
   BLOCk POLAr
   BLOCk MATE 3
   BLOCk SEGMent
-    1   ri-rs/2   -90  0.002 ! -90
-    2   ri-rs/2   -90  0.003 ! -90
-    3   ri-rs/2     0  0.003 !   0
-    4   ri-rs/2     0  0.002 !   0
+    1   ri-hs/2   -90  0.002 ! -90
+    2   ri-hs/2   -90  0.003 ! -90
+    3   ri-hs/2     0  0.003 !   0
+    4   ri-hs/2     0  0.002 !   0
 
 SURFace 3
   QUAD 4
   BLOCk POLAr
   BLOCk MATE 3
   BLOCk SEGMent
-    1   ri-rs/2     0  0.002 !   0
-    2   ri-rs/2     0  0.003 !   0
-    3   ri-rs/2    90  0.003 !  90
-    4   ri-rs/2    90  0.002 !  90
+    1   ri-hs/2     0  0.002 !   0
+    2   ri-hs/2     0  0.003 !   0
+    3   ri-hs/2    90  0.003 !  90
+    4   ri-hs/2    90  0.002 !  90
 
 SURFace 4
   QUAD 4
   BLOCk POLAr
   BLOCk MATE 3
   BLOCk SEGMent
-    1   ri-rs/2    90  0.002 !  90
-    2   ri-rs/2    90  0.003 !  90
-    3   ri-rs/2   180  0.003 ! 180
-    4   ri-rs/2   180  0.002 ! 180
+    1   ri-hs/2    90  0.002 !  90
+    2   ri-hs/2    90  0.003 !  90
+    3   ri-hs/2   180  0.003 ! 180
+    4   ri-hs/2   180  0.002 ! 180
     
 PAIR 1
   NTOS 1 5
@@ -243,7 +243,7 @@ PAIR 1
   TOLE,,1.0d-6 1.0d-6 1.0d-5
 
 ! AUGMent
-! THICkness CONStant rs/2-1.0E-05
+! THICkness CONStant hs/2-1.0E-05
 
 PAIR 2
   NTOS 2 6
@@ -251,7 +251,7 @@ PAIR 2
   TOLE,,1.0d-6 1.0d-6 1.0d-5
 
 ! AUGMent
-! THICkness CONStant rs/2-1.0E-05
+! THICkness CONStant hs/2-1.0E-05
 
 PAIR 3
   NTOS 3 7
@@ -259,7 +259,7 @@ PAIR 3
   TOLE,,1.0d-6 1.0d-6 1.0d-5
 
 ! AUGMent
-! THICkness CONStant rs/2-1.0E-05
+! THICkness CONStant hs/2-1.0E-05
 
 PAIR 4
   NTOS 4 8
@@ -267,7 +267,7 @@ PAIR 4
   TOLE,,1.0d-6 1.0d-6 1.0d-5
 
 ! AUGMent
-! THICkness CONStant rs/2-1.0E-05
+! THICkness CONStant hs/2-1.0E-05
 
 END
 
